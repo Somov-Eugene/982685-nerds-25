@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Евгений Сомов](https://up.htmlacademy.ru/htmlcss/25/user/982685).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Налимова](https://htmlacademy.ru/profile/tuetfe).
 
 ---
 
