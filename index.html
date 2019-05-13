@@ -10,27 +10,55 @@
         <a class="header-logo">
           <img src="http://placehold.it/160x65?text=Nёrds" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
         </a>
+
         <ul class="site-navigation">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
+
         <ul class="basket">
           <li><a class="basket-link" href="#">Корзина</a></li>
         </ul>
       </nav>
-
       <h1 class="visually-hidden">Нёрдс&nbsp;&ndash; дизайн-студия из Краснодара</h1>
     </header>
 
     <main class="container">
       <section class="slider">
-        <!-- здесь будет размещаться слайдер -->
+        <h2 class="visually-hidden">Наши преимущества</h2>
+
+        <input type="radio" id="slider-id-1" name="toggle" checked>
+        <input type="radio" id="slider-id-2" name="toggle">
+        <input type="radio" id="slider-id-3" name="toggle">
+        <div class="slider-controls">
+          <label for="slider-id-1">1</label>
+          <label for="slider-id-2">2</label>
+          <label for="slider-id-3">3</label>
+        </div>
+
+        <ul class="slider-list">
+          <li class="slider-item">
+            <h3>Долго, дорого, скрупулезно</h3>
+            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+            <a class="btn btn-slider-details" href="#">Узнать больше</a>
+          </li>
+          <li class="slider-item">
+            <h3>Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+            <a class="btn btn-slider-details" href="#">Узнать больше</a>
+          </li>
+          <li class="slider-item">
+            <h3>Только ночь, только хардкор</h3>
+            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <a class="btn btn-slider-details" href="#">Узнать больше</a>
+          </li>
+        </ul>
       </section>
 
       <section class="services">
-        <h2 class="visually-hidden">Услуги</h2>
+        <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-list">
           <li class="services-item">
             <h3>Веб-сайты</h3>
@@ -53,7 +81,6 @@
       <section class="about">
         <!-- здесь будет размещаться краткая информация о студии -->
       </section>
-
       <section class="clients">
         <!-- здесь будут размещаться логотипы проектов -->
       </section>
@@ -63,7 +90,6 @@
       <section class="footer-contacts">
         <!-- здесь будут размещаться карта города со схемой проезда и контактная информация -->
       </section>
-
       <div class="footer-social">
         <ul>
           <li><a class="btn-soc btn-soc-vk" href="#">ВКонтакте</a></li>
@@ -71,7 +97,6 @@
           <li><a class="btn-soc btn-soc-ig" href="#">Инстаграм</a></li>
         </ul>
       </div>
-
       <div class="footer-slogan">
         <b>Давайте дружить, это выгодно!</b>
         <p>Скидка 10% для друзей из социальных сетей.</p>
