@@ -27,20 +27,79 @@
     </header>
 
     <main class="container">
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- здесь будет размещаться группа формы Стоимость -->
-        <!-- здесь будет размещаться группа формы Сетка -->
-        <!-- здесь будет размещаться группа формы Особенности -->
+
+        <form class="filters-form" action="#" method="post">
+          <fieldset class="fields-cost">
+            <legend>Стоимость:</legend>
+            <div class="slider-range">
+              <div class="controls-range">
+                <div class="scale"><div class="bar"></div></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="controls-price">
+                <label class="price-min">от <input name="price-min" type="text" value="0"></label>
+                <label class="price-max">до <input name="price-max" type="text" value="15000"></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fields-grid">
+            <legend>Сетка:</legend>
+            <ul class="filter-option">
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-adaptive" value="adaptive" checked>
+                  <label for="grid-id-adaptive">Адаптивная</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-fixed" value="fixed">
+                  <label for="grid-id-fixed">Фиксированная</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-rubber" value="rubber">
+                  <label for="grid-id-rubber">Резиновая</label>
+                </li>
+              </ul>
+          </fieldset>
+
+          <fieldset class="fields-features">
+            <legend>Особенности:</legend>
+            <ul class="filter-option">
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
+                  <label for="feat-id-slider">Слайдер</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
+                  <label for="feat-id-advantages">Блок преимуществ</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
+                  <label for="feat-id-news">Новости</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
+                  <label for="feat-id-gallery">Галерея</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="basket" id="feat-id-basket">
+                  <label for="feat-id-basket">Корзина</label>
+                </li>
+              </ul>
+          </fieldset>
+
+          <button type="submit" class="filter-submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
-
         <div class="catalog-sort">
           <!-- здесь будет размещаться блок Сортировать -->
         </div>
-
         <ul class="catalog-list">
           <!-- SEDONA -->
           <li class="catalog-item">
@@ -53,7 +112,6 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-
           <!-- PINK -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -65,7 +123,6 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-
           <!-- Barbershop BORODINSKI -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -77,7 +134,6 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-
           <!-- MISHKA -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -89,7 +145,6 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-
           <!-- A+ -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -101,7 +156,6 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-
           <!-- КВАСТ -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -114,7 +168,6 @@
             </div>
           </li>
         </ul>
-
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-active"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
@@ -127,7 +180,6 @@
     <footer class="footer">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-
         <div class="footer-contacts-map">
           <img src="http://placehold.it/1440x415?text=The_Map" width="1440" height="415" alt="Дизайн-студия «Нёрдс» на карте">
         </div>
@@ -147,6 +199,7 @@
           <li><a class="btn-soc btn-soc-ig" href="#">Инстаграм</a></li>
         </ul>
       </section>
+
       <div class="footer-slogan">
         <b>Давайте дружить, это выгодно!</b>
         <p>Скидка 10% для друзей из социальных сетей.</p>
