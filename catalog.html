@@ -49,17 +49,17 @@
 
           <fieldset class="fields-grid">
             <legend>Сетка:</legend>
-            <ul class="filter-option">
+            <ul class="filter-options">
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-adaptive" value="adaptive" checked>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
                   <label for="grid-id-adaptive">Адаптивная</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-fixed" value="fixed">
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
                   <label for="grid-id-fixed">Фиксированная</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" id="grid-id-rubber" value="rubber">
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber">
                   <label for="grid-id-rubber">Резиновая</label>
                 </li>
               </ul>
@@ -67,39 +67,52 @@
 
           <fieldset class="fields-features">
             <legend>Особенности:</legend>
-            <ul class="filter-option">
+            <ul class="filter-options">
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="slider" id="feat-id-slider" checked>
                   <label for="feat-id-slider">Слайдер</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="advantages" id="feat-id-advantages">
                   <label for="feat-id-advantages">Блок преимуществ</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="news" id="feat-id-news" checked>
                   <label for="feat-id-news">Новости</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="gallery" id="feat-id-gallery">
                   <label for="feat-id-gallery">Галерея</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="basket" id="feat-id-basket">
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="basket" id="feat-id-basket">
                   <label for="feat-id-basket">Корзина</label>
                 </li>
               </ul>
           </fieldset>
 
-          <button type="submit" class="filter-submit">Показать</button>
+          <button class="btn filter-submit" type="submit">Показать</button>
         </form>
       </section>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
+
         <div class="catalog-sort">
-          <!-- здесь будет размещаться блок Сортировать -->
+          <p class="sort-title">Сортировать:</p>
+          <ul class="sort-fields">
+            <li><a class="sort-fields-selected">по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по названию</a></li>
+          </ul>
+
+          <p class="visually-hidden">Порядок сортировки:</p>
+          <ul class="sort-direction">
+            <li><a class="sort-direction-down"><span class="visually-hidden">по убыванию</span></a></li>
+            <li><a class="sort-direction-up" href="#"><span class="visually-hidden">по возрастанию</span></a></li>
+          </ul>
         </div>
+
         <ul class="catalog-list">
           <!-- SEDONA -->
           <li class="catalog-item">
@@ -112,6 +125,7 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
+
           <!-- PINK -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -123,6 +137,7 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
+
           <!-- Barbershop BORODINSKI -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -134,6 +149,7 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
+
           <!-- MISHKA -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -145,7 +161,8 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
-          <!-- A+ -->
+
+          <!-- A Plus -->
           <li class="catalog-item">
             <div class="catalog-picture">
               <img src="http://placehold.it/360x576?text=A-Plus" width="360" height="576" alt="Сайт A+">
@@ -156,6 +173,7 @@
               <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
+
           <!-- КВАСТ -->
           <li class="catalog-item">
             <div class="catalog-picture">
@@ -168,6 +186,7 @@
             </div>
           </li>
         </ul>
+
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-active"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
@@ -180,9 +199,11 @@
     <footer class="footer">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
+
         <div class="footer-contacts-map">
           <img src="http://placehold.it/1440x415?text=The_Map" width="1440" height="415" alt="Дизайн-студия «Нёрдс» на карте">
         </div>
+
         <div class="footer-contacts-detail">
           <b>NЁRDS DESIGN STUDIO</b>
           <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
