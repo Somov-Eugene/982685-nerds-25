@@ -7,8 +7,8 @@
   <body>
     <header class="header">
       <nav class="header-navigation">
-        <a class="header-logo">
-          <img src="http://placehold.it/160x65?text=Nёrds" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+        <a class="header-logo" href="index.html">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
         </a>
 
         <ul class="site-navigation">
@@ -27,25 +27,97 @@
     </header>
 
     <main class="container">
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- здесь будет размещаться группа формы Стоимость -->
-        <!-- здесь будет размещаться группа формы Сетка -->
-        <!-- здесь будет размещаться группа формы Особенности -->
+
+        <form class="filters-form" action="#" method="post">
+          <fieldset class="fields-cost">
+            <legend>Стоимость:</legend>
+            <div class="slider-range">
+              <div class="controls-range">
+                <div class="scale"><div class="bar"></div></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="controls-price">
+                <label class="price-min">от <input name="price-min" type="text" value="0"></label>
+                <label class="price-max">до <input name="price-max" type="text" value="15000"></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fields-grid">
+            <legend>Сетка:</legend>
+            <ul class="filter-options">
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
+                  <label for="grid-id-adaptive">Адаптивная</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
+                  <label for="grid-id-fixed">Фиксированная</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber">
+                  <label for="grid-id-rubber">Резиновая</label>
+                </li>
+              </ul>
+          </fieldset>
+
+          <fieldset class="fields-features">
+            <legend>Особенности:</legend>
+            <ul class="filter-options">
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="slider" id="feat-id-slider" checked>
+                  <label for="feat-id-slider">Слайдер</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="advantages" id="feat-id-advantages">
+                  <label for="feat-id-advantages">Блок преимуществ</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="news" id="feat-id-news" checked>
+                  <label for="feat-id-news">Новости</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="gallery" id="feat-id-gallery">
+                  <label for="feat-id-gallery">Галерея</label>
+                </li>
+                <li>
+                  <input class="visually-hidden type-checkbox" type="checkbox" name="features" value="basket" id="feat-id-basket">
+                  <label for="feat-id-basket">Корзина</label>
+                </li>
+              </ul>
+          </fieldset>
+
+          <button class="btn filter-submit" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
 
         <div class="catalog-sort">
-          <!-- здесь будет размещаться блок Сортировать -->
+          <p class="sort-title">Сортировать:</p>
+          <ul class="sort-fields">
+            <li><a class="sort-fields-selected">по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по названию</a></li>
+          </ul>
+
+          <p class="visually-hidden">Порядок сортировки:</p>
+          <ul class="sort-direction">
+            <li><a class="sort-direction-down"><span class="visually-hidden">по убыванию</span></a></li>
+            <li><a class="sort-direction-up" href="#"><span class="visually-hidden">по возрастанию</span></a></li>
+          </ul>
         </div>
 
         <ul class="catalog-list">
           <!-- SEDONA -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=SEDONA" width="360" height="576" alt="Сайт Sedona">
+              <img src="img/img-sedona.jpg" width="360" height="576" alt="Сайт Sedona">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">SEDONA</a></h3>
@@ -57,7 +129,7 @@
           <!-- PINK -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=PINK" width="360" height="576" alt="Сайт Pink">
+              <img src="img/img-pink.jpg" width="360" height="576" alt="Сайт Pink">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">PINK</a></h3>
@@ -69,7 +141,7 @@
           <!-- Barbershop BORODINSKI -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=BORODINSKI" width="360" height="576" alt="Сайт Barbershop BORODINSKI">
+              <img src="img/img-barbershop.jpg" width="360" height="576" alt="Сайт Barbershop BORODINSKI">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">Barbershop</a></h3>
@@ -81,7 +153,7 @@
           <!-- MISHKA -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=MISHKA" width="360" height="576" alt="Сайт Mishka">
+              <img src="img/img-mishka.jpg" width="360" height="576" alt="Сайт Mishka">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">MISHKA</a></h3>
@@ -90,10 +162,10 @@
             </div>
           </li>
 
-          <!-- A+ -->
+          <!-- A Plus -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=A-Plus" width="360" height="576" alt="Сайт A+">
+              <img src="img/img-aplus.jpg" width="360" height="576" alt="Сайт A+">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">A Plus</a></h3>
@@ -105,7 +177,7 @@
           <!-- КВАСТ -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="http://placehold.it/360x576?text=Kvast" width="360" height="576" alt="Сайт КВАСТ">
+              <img src="img/img-kvast.jpg" width="360" height="576" alt="Сайт КВАСТ">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">КВАСТ</a></h3>
@@ -126,16 +198,28 @@
 
     <footer class="footer">
       <section class="footer-contacts">
-        <!-- здесь будут размещаться карта города со схемой проезда и контактная информация -->
+        <h2 class="visually-hidden">Контактная информация</h2>
+
+        <div class="footer-contacts-map">
+          <img src="http://placehold.it/1440x415?text=The_Map" width="1440" height="415" alt="Дизайн-студия «Нёрдс» на карте">
+        </div>
+
+        <div class="footer-contacts-detail">
+          <b>NЁRDS DESIGN STUDIO</b>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn btn-write" href="#">Напишите нам</a>
+        </div>
       </section>
 
-      <div class="footer-social">
+      <section class="footer-social">
+        <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
         <ul>
           <li><a class="btn-soc btn-soc-vk" href="#">ВКонтакте</a></li>
           <li><a class="btn-soc btn-soc-fb" href="#">Фейсбук</a></li>
           <li><a class="btn-soc btn-soc-ig" href="#">Инстаграм</a></li>
         </ul>
-      </div>
+      </section>
 
       <div class="footer-slogan">
         <b>Давайте дружить, это выгодно!</b>
