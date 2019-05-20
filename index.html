@@ -36,9 +36,9 @@
         <input type="radio" id="slider-id-3" name="toggle">
         <div class="slider-controls">
           <!-- в этом блоке будет использововано изображение active-button.svg -->
-          <label for="slider-id-1">1</label>
-          <label for="slider-id-2">2</label>
-          <label for="slider-id-3">3</label>
+          <label for="slider-id-1" aria-label="Слайд 1"></label>
+          <label for="slider-id-2" aria-label="Слайд 2"></label>
+          <label for="slider-id-3" aria-label="Слайд 3"></label>
         </div>
         <ul class="sliders-list">
           <li class="slider-item">
@@ -165,9 +165,9 @@
         <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
         <!-- в этом блоке будут использовованы изображения icon-vk.svg, icon-fb.svg и icon-insta.svg -->
         <ul>
-          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте">ВКонтакте</a></li>
-          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке">Фейсбук</a></li>
-          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме">Инстаграм</a></li>
+          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
+          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
       </section>
 
@@ -182,15 +182,15 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-name-id">Ваше имя:</label>
-          <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия">
+          <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия" aria-label="Введите Ваше имя и фамилию">
         </p>
         <p>
           <label for="user-mail-id">Ваш e-mail:</label>
-          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com">
+          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com" aria-label="Введите Ваш адрес электронной почты">
         </p>
         <p>
           <label for="msg-text-id">Текст письма:</label>
-          <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме"></textarea>
+          <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме" aria-label="Введите Ваше сообщение в свободной форме"></textarea>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>

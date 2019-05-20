@@ -113,8 +113,12 @@
           <h3 class="visually-hidden">Порядок сортировки:</h3>
           <ul class="sort-direction">
             <!-- в этом блоке будут использовованы изображения icon-dir-down.svg и icon-dir-up.svg -->
-            <li><a class="sort-direction-down sort-direction-selected"><span class="visually-hidden">по убыванию</span></a></li>
-            <li><a class="sort-direction-up" href="#"><span class="visually-hidden">по возрастанию</span></a></li>
+            <li>
+              <a class="sort-direction-down sort-direction-selected" aria-label="по убыванию"><span class="visually-hidden">по убыванию</span></a>
+            </li>
+            <li>
+              <a class="sort-direction-up" href="#" aria-label="по возрастанию"><span class="visually-hidden">по возрастанию</span></a>
+            </li>
           </ul>
         </div>
 
@@ -123,24 +127,24 @@
           <li class="catalog-item">
             <!-- в этих блоках будет использововано изображение browser.svg -->
             <div class="catalog-picture">
-              <img src="img/img-sedona.jpg" width="360" height="576" alt="Сайт «Седона»">
+              <img src="img/img-sedona.jpg" width="360" height="576" alt="Информационный сайт для туристов «Седона»">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">SEDONA</a></h3>
               <p class="catalog-item-description">Информационный сайт для туристов</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
           <!-- PINK -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="img/img-pink.jpg" width="360" height="576" alt="Сайт «Пинк»">
+              <img src="img/img-pink.jpg" width="360" height="576" alt="Продуктовый лендинг приложения «Пинк»">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">PINK</a></h3>
               <p class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -152,52 +156,52 @@
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">Barbershop</a></h3>
               <p class="catalog-item-description">Сайт салона красоты. Для мужчин, да.</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
           <!-- MISHKA -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="img/img-mishka.jpg" width="360" height="576" alt="Сайт «Мишка»">
+              <img src="img/img-mishka.jpg" width="360" height="576" alt="Сайт магазина вязаных игрушек «Мишка»">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">MISHKA</a></h3>
               <p class="catalog-item-description">Интернет-магазин вязаных игрушек</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
           <!-- A Plus -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="img/img-aplus.jpg" width="360" height="576" alt="Сайт «А Плюс»">
+              <img src="img/img-aplus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации «А Плюс»">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">A Plus</a></h3>
               <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
           <!-- КВАСТ -->
           <li class="catalog-item">
             <div class="catalog-picture">
-              <img src="img/img-kvast.jpg" width="360" height="576" alt="Сайт «Кваст»">
+              <img src="img/img-kvast.jpg" width="360" height="576" alt="Промо-сайт производителя крафтового кваса «Кваст»">
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">КВАСТ</a></h3>
               <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
-              <a class="catalog-item-price btn" href="#">9&nbsp;900&nbsp;руб.</a>
+              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
         </ul>
 
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-active" aria-label="Текущая страница"><a>1</a></li>
-          <li class="pagination-item"><a href="#" aria-label="Перейти на страницу">2</a></li>
-          <li class="pagination-item"><a href="#" aria-label="Перейти на страницу">3</a></li>
-          <li class="pagination-item pagination-next"><a href="#" aria-label="Перейти на страницу">следующая</a></li>
+          <li class="pagination-item pagination-item-active"><a aria-label="Текущая страница 1">1</a></li>
+          <li class="pagination-item"><a href="#" aria-label="Перейти на страницу 2">2</a></li>
+          <li class="pagination-item"><a href="#" aria-label="Перейти на страницу 3">3</a></li>
+          <li class="pagination-item pagination-next"><a href="#" aria-label="Перейти на следующую страницу">следующая</a></li>
         </ul>
       </section>
     </main>
@@ -223,9 +227,9 @@
         <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
         <!-- в этом блоке будут использовованы изображения icon-vk.svg, icon-fb.svg и icon-insta.svg -->
         <ul>
-          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте">ВКонтакте</a></li>
-          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке">Фейсбук</a></li>
-          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме">Инстаграм</a></li>
+          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
+          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
       </section>
 
@@ -240,15 +244,15 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-name-id">Ваше имя:</label>
-          <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия">
+          <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия" aria-label="Введите Ваше имя и фамилию">
         </p>
         <p>
           <label for="user-mail-id">Ваш e-mail:</label>
-          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com">
+          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com" aria-label="Введите Ваш адрес электронной почты">
         </p>
         <p>
           <label for="msg-text-id">Текст письма:</label>
-          <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме"></textarea>
+          <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме" aria-label="Введите Ваше сообщение в свободной форме"></textarea>
         </p>
         <button class="button" type="submit">Отправить</button>
       </form>
