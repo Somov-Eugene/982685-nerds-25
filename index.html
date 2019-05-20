@@ -19,6 +19,7 @@
         </ul>
 
         <ul class="basket">
+          <!-- в этом блоке будет использововано изображение icon-basket.svg -->
           <li><a class="basket-link" href="#">Корзина</a></li>
         </ul>
       </nav>
@@ -34,22 +35,26 @@
         <input type="radio" id="slider-id-2" name="toggle">
         <input type="radio" id="slider-id-3" name="toggle">
         <div class="slider-controls">
+          <!-- в этом блоке будет использововано изображение active-button.svg -->
           <label for="slider-id-1">1</label>
           <label for="slider-id-2">2</label>
           <label for="slider-id-3">3</label>
         </div>
         <ul class="sliders-list">
           <li class="slider-item">
+            <!-- в этом блоке будет использововано изображение slide-picture-1.png -->
             <h3>Долго, дорого, скрупулезно.</h3>
             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
             <a class="btn btn-slider-details" href="#">Узнать больше</a>
           </li>
           <li class="slider-item">
+            <!-- в этом блоке будет использововано изображение slide-picture-2.png -->
             <h3>Любим математику как никто другой</h3>
             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
             <a class="btn btn-slider-details" href="#">Узнать больше</a>
           </li>
           <li class="slider-item">
+            <!-- в этом блоке будет использововано изображение slide-picture-3.png -->
             <h3>Только ночь, только хардкор</h3>
             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="btn btn-slider-details" href="#">Узнать больше</a>
@@ -101,17 +106,20 @@
           <!-- в этом блоке будет использововано фоновое изображение nerds-picture.png -->
           <h3 class="about-table-title">С 2004 года любим точность во всем:</h3>
           <table class="about-table">
-            <tr>
-              <th>Уровень самоотдачи</th>
-              <th>Соблюдение сроков</th>
-              <th>Минимальная предоплата</th>
-            </tr>
-            <tr>
-              <td>146<span class="percent">%</span></td>
-              <td>100<span class="percent">%</span></td>
-              <td>50<span class="percent">%</span></td>
-            </tr>
-
+            <thead>
+              <tr>
+                <th>Уровень самоотдачи</th>
+                <th>Соблюдение сроков</th>
+                <th>Минимальная предоплата</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>146<span class="percent">%</span></td>
+                <td>100<span class="percent">%</span></td>
+                <td>50<span class="percent">%</span></td>
+              </tr>
+            </tbody>
           </table>
         </div>
 
@@ -121,16 +129,16 @@
         <ul class="partners-list">
           <li class="partner-item">
             <!-- ТЗ: Обязательные требования п. 3.6 -->
-            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/210x90?text=Logo-1" width="210" height="90" alt="Логотип HTML Academy"></a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Академии"><img src="img/htmlacademy-logo.png" width="199" height="68" alt="Логотип HTML Академии"></a>
           </li>
           <li class="partner-item">
-            <a href="#"><img src="http://placehold.it/210x90?text=Logo-2" width="210" height="90" alt="Логотип барбершопа «Бородинский»"></a>
+            <a href="#" aria-label="Перейти на сайт барбершопа «Бородинский»"><img src="img/borodinski-logo.png" width="209" height="90" alt="Логотип барбершопа «Бородинский»"></a>
           </li>
           <li class="partner-item">
-            <a href="#"><img src="http://placehold.it/210x90?text=Logo-3" width="210" height="90" alt="Логотип Pink"></a>
+            <a href="#" aria-label="Перейти на сайт проекта «Пинк»"><img src="img/pink-logo.png" width="185" height="52" alt="Логотип проекта «Пинк»"></a>
           </li>
           <li class="partner-item">
-            <a href="#"><img src="http://placehold.it/210x90?text=Logo-4" width="210" height="90" alt="Логотип «Мишка»"></a>
+            <a href="#" aria-label="Перейти на сайт магазина вязаных игрушек «Мишка»"><img src="img/mishka-logo.png" width="173" height="84" alt="Логотип магазина «Мишка»"></a>
           </li>
         </ul>
       </section>
@@ -140,24 +148,26 @@
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
 
-        <div class="footer-contacts-map">
-          <img src="http://placehold.it/1440x415?text=The_Map" width="1440" height="415" alt="Дизайн-студия «Нёрдс» на карте">
-        </div>
         <div class="footer-contacts-detail">
-          <b>NЁRDS DESIGN STUDIO</b>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. +7 (812) 275-75-75</p>
-          <a class="btn btn-write" href="#">Напишите нам</a>
+          <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
+          <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p><a href="tel:+78122757575" aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</a></p>
+          <p><a class="btn btn-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
+        </div>
+
+        <div class="footer-contacts-map">
+          <!-- в этом блоке будет использововано изображение map-marker.png -->
+          <img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города">
         </div>
       </section>
 
       <section class="footer-social">
         <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
-
+        <!-- в этом блоке будут использовованы изображения icon-vk.svg, icon-fb.svg и icon-insta.svg -->
         <ul>
-          <li><a class="btn-soc btn-soc-vk" href="#">ВКонтакте</a></li>
-          <li><a class="btn-soc btn-soc-fb" href="#">Фейсбук</a></li>
-          <li><a class="btn-soc btn-soc-ig" href="#">Инстаграм</a></li>
+          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте">ВКонтакте</a></li>
+          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке">Фейсбук</a></li>
+          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме">Инстаграм</a></li>
         </ul>
       </section>
 
@@ -167,9 +177,26 @@
       </div>
     </footer>
 
-    <!-- Здесь добавить разметку модального окна (форма для отправки сообщений при нажатии кнопки "Напишите нам") -->
-    <!-- <section class="modal-msg"> -->
+    <section class="modal modal-feedback">
+      <h2>Напишите нам</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-name-id">Ваше имя:</label>
+          <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-mail-id">Ваш e-mail:</label>
+          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="msg-text-id">Текст письма:</label>
+          <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <!-- здесь будет использововано изображение close-cross.svg -->
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
 
-    <!-- </section> -->
   </body>
 </html>
