@@ -28,6 +28,216 @@
        url("../fonts/roboto-bold.woff") format("woff");
 }
 
+/* ---------- Общие элементы ----------*/
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ---------- Шапка сайта ----------*/
+.header {
+  background-color: #eeeeee;
+}
+
+.header-logo {
+  width: 160px;
+  height: 65px;
+}
+
+.header-logo:hover,
+.header-logo:focus {
+  opacity: 0.8;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
+.site-navigation,
+.basket {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.site-navigation a,
+.basket a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.basket a:hover,
+.basket a:focus {
+  color: #fb565a;
+}
+
+.site-navigation a:active,
+.basket a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-active {
+  color: #000000;
+  border-bottom: 2px solid #fb565a;
+}
+
+/* ---------- Наши услуги ----------*/
+.services {
+  background-color: #ffffff;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.service-item {
+  text-align: left;
+}
+
+.service-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.btn-order {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  width: 160px;
+  height: 50px;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
+.btn-sites {
+  background-color: #fb565a;
+}
+
+.btn-sites:hover,
+.btn-sites:focus {
+  background-color: #e74246;
+}
+
+.btn-sites:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
+.btn-apps {
+  background-color: #00ca74;
+}
+
+.btn-apps:hover,
+.btn-apps:focus {
+  background-color: #00bc6c;
+}
+
+.btn-apps:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #00aa62;
+}
+
+.btn-presentations {
+  background-color: #efc84a;
+}
+
+.btn-presentations:hover,
+.btn-presentations:focus {
+  background-color: #eab534;
+}
+
+.btn-presentations:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #e5a722;
+}
+
+
+/* ---------- Наша студия в социальных сетях ----------*/
+.footer-social ul {
+  list-style: none;
+}
+
+.btn-soc {
+  width: 79px;
+  height: 79px;
+  vertical-align: middle;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+
+.btn-soc:hover,
+.btn-soc:focus {
+  background-color: #e74246;
+}
+
+.btn-soc:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
+
+.btn-soc-vk {
+  background: #eeeeee;
+  background-image: url(../img/icon-vk.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.btn-soc-fb {
+  background: #eeeeee;
+  background-image: url(../img/icon-fb.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.btn-soc-ig {
+  background: #eeeeee;
+  background-image: url(../img/icon-insta.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-slogan b {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.footer-slogan p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+}
+
 /* всплывающие элементы (pop-up) сейчас временно скрыты (до раздела 7) */
 .modal {
   display: none;
