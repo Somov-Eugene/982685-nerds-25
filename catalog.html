@@ -33,9 +33,9 @@
     <main class="container">
 
       <section class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
-        <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="fields-cost">
             <legend>Стоимость:</legend>
             <div class="slider-range">
@@ -103,17 +103,19 @@
       </section>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог</h2>
+        <h2 class="visually-hidden">Каталог шаблонов</h2>
 
         <div class="catalog-sort">
-          <h3 class="sort-title">Сортировать:</h3>
+          <h3 class="visually-hidden">Сортировка</h3>
+
+          <h4 class="sort-title">Сортировать:</h4>
           <ul class="sort-fields">
             <li><a class="sort-fields-selected">по цене</a></li>
             <li><a href="#">по типу</a></li>
             <li><a href="#">по названию</a></li>
           </ul>
 
-          <h3 class="visually-hidden">Порядок сортировки:</h3>
+          <h4 class="visually-hidden">Порядок сортировки:</h4>
           <ul class="sort-direction">
             <!-- в этом блоке будут использовованы изображения icon-dir-down.svg и icon-dir-up.svg -->
             <li>
