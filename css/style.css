@@ -1,4 +1,32 @@
-/* Шрифт «Roboto» */
+/* Шрифт «Roboto Regular» */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"),
+       url("../fonts/roboto-regular.woff2") format("woff2"),
+       url("../fonts/roboto-regular.woff") format("woff");
+}
+
+/* Шрифт «Roboto Medium» */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+       url("../fonts/roboto-medium.woff2") format("woff2"),
+       url("../fonts/roboto-medium.woff") format("woff");
+}
+
+/* Шрифт «Roboto Bold» */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+       url("../fonts/roboto-bold.woff2") format("woff2"),
+       url("../fonts/roboto-bold.woff") format("woff");
+}
 
 /* всплывающие элементы (pop-up) сейчас временно скрыты (до раздела 7) */
 .modal {
