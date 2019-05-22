@@ -57,15 +57,15 @@
             <ul class="filter-options">
                 <!-- в этом блоке будут использовованы изображения radio-on.svg и radio-off.svg -->
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
+                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
                   <label for="grid-id-adaptive">Адаптивная</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
+                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
                   <label for="grid-id-fixed">Фиксированная</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber">
+                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber" disabled>
                   <label for="grid-id-rubber">Резиновая</label>
                 </li>
               </ul>
@@ -76,23 +76,23 @@
             <ul class="filter-options">
                 <!-- в этом блоке будут использовованы изображения checkbox-on.svg и checkbox-off.svg -->
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
+                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
                   <label for="feat-id-slider">Слайдер</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
+                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
                   <label for="feat-id-advantages">Блок преимуществ</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
+                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
                   <label for="feat-id-news">Новости</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
+                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
                   <label for="feat-id-gallery">Галерея</label>
                 </li>
                 <li>
-                  <input class="visually-hidden type-checkbox" type="checkbox" name="basket" id="feat-id-basket">
+                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="basket" id="feat-id-basket" disabled>
                   <label for="feat-id-basket">Корзина</label>
                 </li>
               </ul>
@@ -136,8 +136,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">SEDONA</a></h3>
-              <p class="catalog-item-description">Информационный сайт для туристов</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Информационный сайт<br>для туристов</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -148,8 +148,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">PINK</a></h3>
-              <p class="catalog-item-description">Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Продуктовый лендинг<br>приложения для iOS и Android</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -160,8 +160,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">Barbershop</a></h3>
-              <p class="catalog-item-description">Сайт салона красоты. Для мужчин, да.</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Сайт салона красоты.<br>Для мужчин, да.</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -172,8 +172,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">MISHKA</a></h3>
-              <p class="catalog-item-description">Интернет-магазин вязаных игрушек</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Интернет-магазин<br>вязаных игрушек</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -184,8 +184,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">A Plus</a></h3>
-              <p class="catalog-item-description">Лендинг курсов повышения квалификации</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Лендинг курсов повышения<br>квалификации</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
 
@@ -196,8 +196,8 @@
             </div>
             <div class="catalog-item-info">
               <h3 class="catalog-item-title"><a href="#">КВАСТ</a></h3>
-              <p class="catalog-item-description">Промо-сайт производителя крафтового кваса</p>
-              <a class="catalog-item-price btn" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
+              <p class="catalog-item-description">Промо-сайт производителя<br>крафтового кваса</p>
+              <a class="btn catalog-item-price" href="#" aria-label="Добавить в корзину">9&nbsp;900&nbsp;руб.</a>
             </div>
           </li>
         </ul>
