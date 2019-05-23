@@ -135,7 +135,7 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-order {
-  display: block;
+  display: inline-block;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -194,47 +194,95 @@ input[type="radio"].visually-hidden {
 
 
 /* ---------- Наша студия в социальных сетях ----------*/
-.footer-social ul {
+.footer-social {
+  display: block;
+  width: 260px;
+  min-height: 80px;
+}
+
+.social-list {
+  display: block;
+  position: relative;
   list-style: none;
 }
 
-.btn-soc {
+.btn-soc::before {
+  content: "";
+  position: absolute;
   width: 79px;
   height: 79px;
-  vertical-align: middle;
+  color: #ffffff;
   background-color: #e1e1e1;
   border-radius: 50%;
 }
 
-.btn-soc:hover,
-.btn-soc:focus {
+.btn-soc:hover::before,
+.btn-soc:focus::before {
   background-color: #e74246;
 }
 
-.btn-soc:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+.btn-soc:active::before {
   background-color: #d7373b;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
-.btn-soc-vk {
-  background: #eeeeee;
+.btn-soc-vk::before {
+  top: 0px;
+  left: 140px;
+}
+
+.btn-soc-fb::before {
+  top: 0px;
+  left: 231px;
+}
+
+.btn-soc-ig::before {
+  top: 0px;
+  left: 321px;
+}
+
+.btn-soc::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+
+.btn-soc-vk::after {
   background-image: url(../img/icon-vk.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  top: 29px;
+  left: 167px;
 }
 
-.btn-soc-fb {
-  background: #eeeeee;
+.btn-soc-fb::after {
   background-image: url(../img/icon-fb.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  top: 29px;
+  left: 258px;
 }
 
-.btn-soc-ig {
-  background: #eeeeee;
+.btn-soc-ig::after {
   background-image: url(../img/icon-insta.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  top: 29px;
+  left: 348px;
+}
+
+.btn-soc-vk:hover::after,
+.btn-soc-vk:focus::after,
+.btn-soc-fb:hover::after,
+.btn-soc-fb:focus::after,
+.btn-soc-ig:hover::after,
+.btn-soc-ig:focus::after {
+  background-color: #e74246;
+}
+
+.btn-soc-vk:active::after,
+.btn-soc-fb:active::after,
+.btn-soc-ig:active::after {
+  background-color: #d7373b;
+  opacity: 0.3;
 }
 
 .footer-slogan b {
@@ -272,7 +320,6 @@ input[type="radio"].visually-hidden {
 
 .filter-options {
   list-style: none;
-  line-height: 30px;
 }
 
 .filter-options li {
@@ -281,6 +328,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input + label {
+  line-height: 20px;
   color: #283136;
   cursor: pointer;
 }
@@ -302,10 +350,18 @@ input[type="radio"].visually-hidden {
   left: -38px;
   width: 25px;
   height: 25px;
+  opacity: 0.4;
+  background-color: #4d4d4d;
   background: url("../img/radio-off.svg") no-repeat 0 0;
 }
 
+.type-radio + label:hover::before,
+.type-radio + label:focus::before {
+  opacity: 1;
+}
+
 .type-radio:checked + label::before {
+  opacity: 1;
   background-image: url("../img/radio-on.svg");
 }
 
@@ -316,12 +372,20 @@ input[type="radio"].visually-hidden {
   left: -38px;
   width: 27px;
   height: 23px;
+  opacity: 0.4;
+  background-color: #4d4d4d;
   background: url("../img/checkbox-off.svg") no-repeat 0 0;
+}
+
+.type-checkbox + label:hover::before,
+.type-checkbox + label:focus::before {
+  opacity: 1;
 }
 
 .type-checkbox:checked + label::before {
   width: 25px;
   height: 25px;
+  opacity: 1;
   background-image: url("../img/checkbox-on.svg");
 }
 
@@ -348,6 +412,7 @@ input[type="radio"].visually-hidden {
 
 .filter-submit:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
 
@@ -422,6 +487,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   width: 200px;
   height: 50px;
+  line-height: 50px;
   color: #ffffff;
   background-color: #fb565a;
   border-radius: 2px;
