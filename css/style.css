@@ -58,7 +58,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
-  font: inherit;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -132,16 +131,26 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .btn-order {
-  display: inline-block;
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   text-align: center;
   width: 160px;
   height: 50px;
+  line-height: 50px;
   color: #ffffff;
   border-radius: 2px;
+}
+
+.btn-order:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .btn-sites {
@@ -154,7 +163,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-sites:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
@@ -168,7 +176,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-apps:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
 }
 
@@ -182,7 +189,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-presentations:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
 }
 
