@@ -34,7 +34,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #283136;
+  color: #000000;
   background-color: #ffffff;
 }
 
@@ -114,6 +114,45 @@ input[type="radio"].visually-hidden {
   border-bottom: 2px solid #fb565a;
 }
 
+/*---------- Слайдер ----------*/
+.sliders-list {
+  list-style: none;
+}
+
+.slider-item h3 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: left;
+  color: #000000;
+}
+
+.slider-item p {
+  text-align: left;
+  color: #283136;
+}
+
+.btn-slider-details {
+  display: inline-block;
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  background-color: #fb565a;
+  border-radius: 2px;
+}
+
+.btn-slider-details:hover,
+.btn-slider-details:focus {
+  background-color: #e74246;
+}
+
+.btn-slider-details:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
 /* ---------- Наши услуги ----------*/
 .services {
   background-color: #ffffff;
@@ -139,7 +178,6 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
   text-align: center;
   width: 160px;
   height: 50px;
@@ -192,6 +230,151 @@ input[type="radio"].visually-hidden {
   background-color: #e5a722;
 }
 
+/* ---------- Коротко о нас ---------- */
+.about {
+  background-color: #ffffff;
+}
+
+.about-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  width: 647px;
+  height: 87px;
+  text-align: left;
+  color: #000000;
+}
+
+.about-principles {
+  text-align: left;
+  color: #283136;
+}
+
+.about-orders-title {
+  text-align: left;
+  color: #000000;
+}
+
+.about-orders-list li {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: #283136;
+}
+
+.about-table-title {
+  text-align: left; /* center */
+  color: #000000;
+}
+
+.about-table {
+  display: table;
+  position: relative;
+  width: 360px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.about-table th {
+  display: table-cell;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.about-table td {
+  display: table-cell;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px; /* 10px */
+  text-align: left;
+}
+
+.about-table span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 22px;
+  vertical-align: top;
+  text-align: left;
+  /*color: #000000;*/
+  color: red;
+}
+
+/* ---------- Наши партнёры ---------- */
+.partners {
+  background-color: #ffffff;
+}
+
+.partners-list {
+  list-style: none;
+}
+
+.partner-item {
+  opacity: 0.2;
+}
+
+.partner-item:hover {
+  opacity: 1;
+}
+
+/*пока не работает*/
+.partner-item:focus {
+  opacity: 1;
+}
+
+.partner-item:active {
+  opacity: 0.1;
+}
+
+
+
+/* ---------- Подвал сайта ---------- */
+.footer {
+  background-color: #ffffff;
+}
+
+.footer-contacts-detail b {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+}
+
+.footer-contacts-detail p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: #666666;
+}
+
+.btn-write {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  width: 219px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #fb565a;
+  border-radius: 2px;
+}
+
+.btn-write:hover,
+.btn-write:focus {
+  background-color: #e74246;
+}
+
+.btn-write:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
 
 /* ---------- Наша студия в социальных сетях ----------*/
 .footer-social {
