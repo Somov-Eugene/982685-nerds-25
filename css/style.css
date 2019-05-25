@@ -232,6 +232,7 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Коротко о нас ---------- */
 .about {
+  margin-bottom: 77px;
   background-color: #ffffff;
 }
 
@@ -262,6 +263,7 @@ input[type="radio"].visually-hidden {
   color: #283136;
 }
 
+/* таблица */
 .about-table-title {
   text-align: left; /* center */
   color: #000000;
@@ -269,7 +271,7 @@ input[type="radio"].visually-hidden {
 
 .about-table {
   display: table;
-  position: relative;
+  /*position: relative;*/
   width: 360px;
   text-align: left;
   border-collapse: collapse;
@@ -281,6 +283,8 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  /*padding-top: 27px;*/
+  padding-bottom: 27px;
   text-align: left;
 }
 
@@ -289,47 +293,41 @@ input[type="radio"].visually-hidden {
   font-family: inherit;
   font-weight: 700;
   font-size: 45px;
-  line-height: 45px; /* 10px */
+  line-height: 10px;
   text-align: left;
 }
 
-.about-table span {
-  display: inline-block;
-  font-weight: 700;
+.about-table .percent {
   font-size: 22px;
-  vertical-align: top;
-  text-align: left;
-  /*color: #000000;*/
-  color: red;
+  vertical-align: super;
 }
 
 /* ---------- Наши партнёры ---------- */
 .partners {
+  margin-bottom: 80px;
   background-color: #ffffff;
 }
 
 .partners-list {
   list-style: none;
 }
+.partners-list li {
+  display: inline-block;
+  width: 260px;
+}
 
-.partner-item {
-  display: block;
+.partner-item .partner-logo {
   opacity: 0.2;
 }
 
-.partner-item:hover {
+.partner-item .partner-logo:hover,
+.partner-item .partner-logo:focus {
   opacity: 1;
 }
 
-/* пока не работает */
-.partner-item:focus {
-  opacity: 1;
+.partner-item .partner-logo:active {
+    opacity: 0.1;
 }
-
-.partner-item:active {
-  opacity: 0.1;
-}
-
 
 /* ---------- Подвал сайта ---------- */
 .footer {
@@ -337,6 +335,23 @@ input[type="radio"].visually-hidden {
 }
 
 /* ---------- Контактная информация ---------- */
+.footer-contacts {
+  display: block;
+  position: relative;
+}
+
+.footer-contacts-detail {
+  display: block;
+  position: absolute;
+  width: 219px;
+  height: 208px;
+  top: 54px;
+  left: 140px;
+  padding: 50px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
 .footer-contacts-detail b {
   font-weight: 700;
   font-size: 18px;
