@@ -31,9 +31,9 @@
 /* ---------- Общие элементы ---------- */
 body {
   font-family: "Roboto", Arial, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
   color: #000000;
   background-color: #ffffff;
 }
@@ -132,8 +132,9 @@ input[type="radio"].visually-hidden {
   color: #283136;
 }
 
-.btn-slider-details {
+.btn-slider-details    {
   display: inline-block;
+  font-weight: 500;
   width: 240px;
   height: 50px;
   line-height: 50px;
@@ -252,11 +253,14 @@ input[type="radio"].visually-hidden {
 }
 
 .about-orders-title {
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: left;
   color: #000000;
 }
 
 .about-orders-list li {
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-align: left;
@@ -265,6 +269,8 @@ input[type="radio"].visually-hidden {
 
 /* таблица */
 .about-table-title {
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: left; /* center */
   color: #000000;
 }
@@ -293,11 +299,12 @@ input[type="radio"].visually-hidden {
   font-family: inherit;
   font-weight: 700;
   font-size: 45px;
-  line-height: 10px;
+  line-height: 54px;
   text-align: left;
 }
 
 .about-table .percent {
+  font-weight: 700;
   font-size: 22px;
   vertical-align: super;
 }
@@ -440,8 +447,8 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-soc:active::before {
-  background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
 }
 
 .btn-soc-vk::before {
@@ -598,6 +605,7 @@ input[type="radio"].visually-hidden {
 
 .controls-price label {
   display: inline-block;
+  font-weight: 400;
   font-size: 16px;
   width: 50%;
   text-transform: uppercase;
@@ -607,6 +615,7 @@ input[type="radio"].visually-hidden {
 
 .controls-price input {
   font: inherit;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   width: 60px;
