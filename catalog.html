@@ -40,14 +40,13 @@
             <legend>Стоимость:</legend>
             <div class="slider-range">
               <div class="controls-range">
-                <!-- в этом блоке будет использововано изображение filter-button.png -->
                 <div class="scale"><div class="bar"></div></div>
                 <div class="toggle toggle-min"></div>
                 <div class="toggle toggle-max"></div>
               </div>
               <div class="controls-price">
                 <label class="price-min">от <input name="price-min" type="text" value="0"></label>
-                <label class="price-max">до <input name="price-max" type="text" value="15000"></label>
+                <label class="price-max">до <input name="price-max" type="text" value="15 000"></label>
               </div>
             </div>
           </fieldset>
@@ -55,7 +54,6 @@
           <fieldset class="fields-grid">
             <legend>Сетка:</legend>
             <ul class="filter-options">
-                <!-- в этом блоке будут использовованы изображения radio-on.svg и radio-off.svg -->
                 <li>
                   <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
                   <label for="grid-id-adaptive">Адаптивная</label>
@@ -74,7 +72,6 @@
           <fieldset class="fields-features">
             <legend>Особенности:</legend>
             <ul class="filter-options">
-                <!-- в этом блоке будут использовованы изображения checkbox-on.svg и checkbox-off.svg -->
                 <li>
                   <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
                   <label for="feat-id-slider">Слайдер</label>
@@ -117,7 +114,6 @@
 
           <h4 class="visually-hidden">Порядок сортировки:</h4>
           <ul class="sort-direction">
-            <!-- в этом блоке будут использовованы изображения icon-dir-down.svg и icon-dir-up.svg -->
             <li>
               <a class="sort-direction-down sort-direction-selected" aria-label="по убыванию"><span class="visually-hidden">по убыванию</span></a>
             </li>
@@ -129,8 +125,7 @@
 
         <ul class="catalog-list">
           <!-- SEDONA -->
-          <li class="catalog-item">
-            <!-- в этих блоках будет использововано изображение browser.svg -->
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-sedona.jpg" width="360" height="576" alt="Информационный сайт для туристов «Седона»">
             </div>
@@ -142,7 +137,7 @@
           </li>
 
           <!-- PINK -->
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-pink.jpg" width="360" height="576" alt="Продуктовый лендинг приложения «Пинк»">
             </div>
@@ -154,7 +149,7 @@
           </li>
 
           <!-- Barbershop BORODINSKI -->
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-barbershop.jpg" width="360" height="576" alt="Сайт барбершопа «Бородинский»">
             </div>
@@ -166,7 +161,7 @@
           </li>
 
           <!-- MISHKA -->
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-mishka.jpg" width="360" height="576" alt="Сайт магазина вязаных игрушек «Мишка»">
             </div>
@@ -178,7 +173,7 @@
           </li>
 
           <!-- A Plus -->
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-aplus.jpg" width="360" height="576" alt="Лендинг курсов повышения квалификации «А Плюс»">
             </div>
@@ -190,7 +185,7 @@
           </li>
 
           <!-- КВАСТ -->
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-picture">
               <img src="img/img-kvast.jpg" width="360" height="576" alt="Промо-сайт производителя крафтового кваса «Кваст»">
             </div>
@@ -217,20 +212,18 @@
 
         <div class="footer-contacts-detail">
           <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
-          <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p><a href="tel:+78122757575" aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</a></p>
+          <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+          <p aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</p>
           <p><a class="btn btn-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
         </div>
 
         <div class="footer-contacts-map">
-          <!-- в этом блоке будет использововано изображение map-marker.png -->
           <img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города">
         </div>
       </section>
 
       <section class="footer-social">
         <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
-        <!-- в этом блоке будут использовованы изображения icon-vk.svg, icon-fb.svg и icon-insta.svg -->
         <ul class="social-list">
           <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
           <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
