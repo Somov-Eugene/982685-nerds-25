@@ -38,8 +38,31 @@ body {
   background-color: #ffffff;
 }
 
+/*-------------------------------*/
+/*  Временно для подсветки сеток  */
+/*body > * {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+body > * > * {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+body > * > * > * {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+*/
+/*body > * > * > * > * {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+*/
+/*body > * > * > * > * > * {
+  background-color: rgba(0, 255, 255, 0.3);
+}*/
+/*-------------------------------*/
+
 a {
-  outline: none;
+  /*outline: none;*/
   text-decoration: none;
 }
 
@@ -58,6 +81,15 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+/*       центровщик       */
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 140px;
+
+  /*background-color: rgba(255, 0, 0, 0.3);*/
+}
+
 .btn {
   text-align: center;
   vertical-align: middle;
@@ -71,13 +103,27 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
 }
 
+.header .container {
+  padding-top: 49px;
+  padding-bottom: 18px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .header-logo {
+  display: block;
   width: 160px;
   height: 65px;
 }
 
 .header-logo:hover,
 .header-logo:focus {
+  outline: none;
   opacity: 0.8;
 }
 
@@ -85,17 +131,73 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.site-navigation,
-.basket {
+.header-navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.site-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
   list-style: none;
+
+  margin: 0;
+  margin-left: 200px;
+  padding: 0;
+  padding-top: 26px;
+  padding-right: 45px;
+  width: 500px;
+}
+
+.basket {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+  max-width: 160px;
+
+  background-color: red;
+}
+
+.basket-link {
+  display: block;
+  position: relative;
+}
+
+.basket-link::before {
+  content:"";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 6px;
+  left: 0px;
+  background-color: red;
+  background: url("../img/icon-basket.svg") no-repeat 0 0;
+  opacity: 0.3;
 }
 
 .site-navigation a,
 .basket a {
+  padding-right: 48px;
   color: #000000;
 }
 
@@ -157,16 +259,51 @@ input[type="radio"].visually-hidden {
 }
 
 /* ---------- Наши услуги ---------- */
+
 .services {
   background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .services-list {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .service-item {
-  text-align: left;
+  width: 300px;
+  margin-right: 100px;
+  padding-top: 145px;
+
+  /*background-color: rgba(0, 255, 0, 0.2);*/
+}
+
+.service-item:last-child {
+  margin-right: 0;
+}
+
+.service-item:nth-child(1) {
+  background-image: url("../img/advantage-picture-red.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
+}
+
+.service-item:nth-child(2) {
+  background-image: url("../img/advantage-picture-green.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
+}
+
+.service-item:nth-child(3) {
+  background-image: url("../img/advantage-picture-yellow.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
 }
 
 .service-item h3 {
@@ -174,6 +311,20 @@ input[type="radio"].visually-hidden {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: left;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+}
+
+.service-item p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+  text-align: left;
+  padding-right: 40px;
 }
 
 .btn-order {
@@ -184,6 +335,8 @@ input[type="radio"].visually-hidden {
   text-align: center;
   width: 160px;
   height: 50px;
+
+  margin-top: 35px;
   line-height: 50px;
   color: #ffffff;
   border-radius: 3px;
@@ -235,8 +388,24 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Коротко о нас ---------- */
 .about {
-  margin-bottom: 77px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   background-color: #ffffff;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.about-column-left,
+.about-column-right {
+  width: 650px;
+}
+
+.about-column-left {
+  margin-right: 150px;
 }
 
 .about-title {
@@ -278,31 +447,42 @@ input[type="radio"].visually-hidden {
 }
 
 .about-table {
-  display: table;
-  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
   width: 360px;
-  text-align: left;
   border-collapse: collapse;
 }
 
+.about-table thead {
+  order: 1;
+  width: 95px;
+}
+
+.about-table tbody {
+  order: 0;
+  width: 95px;
+}
+
 .about-table th {
-  display: table-cell;
+  /*display: table-cell;*/
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  /*padding-top: 27px;*/
-  padding-bottom: 27px;
+  padding-top: 27px;
+  /*padding-bottom: 27px;*/
+  margin-right: 25px;
   text-align: left;
 }
 
 .about-table td {
-  display: table-cell;
+  /*display: table-cell;*/
   font-family: inherit;
   font-weight: 700;
   font-size: 45px;
   line-height: 54px;
   text-align: left;
+  margin-right: 25px;
 }
 
 .about-table .percent {
@@ -313,8 +493,10 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Наши партнёры ---------- */
 .partners {
-  margin-bottom: 80px;
   background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .partners-list {
@@ -340,7 +522,11 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Подвал сайта ---------- */
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #ffffff;
+  padding-top: 80px;
 }
 
 /* ---------- Контактная информация ---------- */
@@ -422,15 +608,24 @@ input[type="radio"].visually-hidden {
 
 /* ---------- социальные сети ---------- */
 .footer-social {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding: 69px 0;
+
+}
+
+.social-icons {
   width: 260px;
-  min-height: 80px;
 }
 
 .social-list {
   display: block;
   position: relative;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .btn-soc::before {
@@ -455,17 +650,17 @@ input[type="radio"].visually-hidden {
 
 .btn-soc-vk::before {
   top: 0px;
-  left: 140px;
+  left: 0px;
 }
 
 .btn-soc-fb::before {
   top: 0px;
-  left: 231px;
+  left: 91px;
 }
 
 .btn-soc-ig::before {
   top: 0px;
-  left: 321px;
+  left: 181px;
 }
 
 .btn-soc::after {
@@ -481,19 +676,19 @@ input[type="radio"].visually-hidden {
 .btn-soc-vk::after {
   background-image: url("../img/icon-vk.svg");
   top: 29px;
-  left: 167px;
+  left: 27px;
 }
 
 .btn-soc-fb::after {
   background-image: url("../img/icon-fb.svg");
   top: 29px;
-  left: 258px;
+  left: 118px;
 }
 
 .btn-soc-ig::after {
   background-image: url("../img/icon-insta.svg");
   top: 29px;
-  left: 348px;
+  left: 208px;
 }
 
 .btn-soc-vk:hover::after,
@@ -512,11 +707,20 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.footer-slogan {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 545px;
+  margin-left: 139px;
+}
+
 .footer-slogan b {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+  padding: 0;
+  padding-top: 9px;
 }
 
 .footer-slogan p {

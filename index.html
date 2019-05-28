@@ -9,25 +9,27 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header-navigation">
-        <a class="header-logo">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
-        </a>
+      <div class="container">
+        <nav class="header-navigation">
+          <a class="header-logo">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+          </a>
+          <div class="header-navigation-container">
+            <ul class="site-navigation">
+              <li><a href="#">Студия</a></li>
+              <li><a href="#">Клиенты</a></li>
+              <li><a href="catalog.html">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
 
-        <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+            <ul class="basket">
+              <li><a class="basket-link" href="#">Корзина</a></li>
+            </ul>
+          </div>
+        </nav>
 
-        <ul class="basket">
-          <!-- в этом блоке будет использововано изображение icon-basket.svg -->
-          <li><a class="basket-link" href="#">Корзина</a></li>
-        </ul>
-      </nav>
-
-      <h1 class="visually-hidden">Нёрдс&nbsp;&ndash; дизайн-студия из Краснодара</h1>
+        <h1 class="visually-hidden">Нёрдс&nbsp;&ndash; дизайн-студия из Краснодара</h1>
+      </div>
     </header>
 
     <main class="container">
@@ -163,19 +165,21 @@
         </div>
       </section>
 
-      <section class="footer-social">
-        <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
-        <ul class="social-list">
-          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
-          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
-          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
-        </ul>
-      </section>
+      <section class="footer-social container">
+        <div class="social-icons">
+          <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
+          <ul class="social-list">
+            <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
+            <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
+          </ul>
+        </div>
 
-      <div class="footer-slogan">
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+        <div class="footer-slogan">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
     </footer>
 
     <section class="modal modal-feedback">
