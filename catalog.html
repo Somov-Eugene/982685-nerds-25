@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
       <nav class="header-navigation">
         <a class="header-logo" href="index.html">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
@@ -22,21 +22,20 @@
         </ul>
 
         <ul class="basket">
-          <!-- в этом блоке будет использововано изображение icon-basket.svg -->
           <li><a class="basket-link" href="#">Корзина</a></li>
         </ul>
       </nav>
 
-      <h1 class="page-title">Магазин готовых шаблонов</h1>
+      <h1>Магазин готовых шаблонов</h1>
     </header>
 
-    <main class="container">
+    <main class="main-content container">
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
         <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="fields-cost">
+          <div class="fields-cost">
             <legend>Стоимость:</legend>
             <div class="slider-range">
               <div class="controls-range">
@@ -49,9 +48,9 @@
                 <label class="price-max">до <input name="price-max" type="text" value="15 000"></label>
               </div>
             </div>
-          </fieldset>
+          </div>
 
-          <fieldset class="fields-grid">
+          <div class="fields-grid">
             <legend>Сетка:</legend>
             <ul class="filter-options">
                 <li>
@@ -67,9 +66,9 @@
                   <label for="grid-id-rubber">Резиновая</label>
                 </li>
               </ul>
-          </fieldset>
+          </div>
 
-          <fieldset class="fields-features">
+          <div class="fields-features">
             <legend>Особенности:</legend>
             <ul class="filter-options">
                 <li>
@@ -93,7 +92,7 @@
                   <label for="feat-id-basket">Корзина</label>
                 </li>
               </ul>
-          </fieldset>
+          </div>
 
           <button class="btn filter-submit" type="submit">Показать</button>
         </form>
@@ -222,19 +221,21 @@
         </div>
       </section>
 
-      <section class="footer-social">
-        <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
-        <ul class="social-list">
-          <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
-          <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
-          <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
-        </ul>
-      </section>
+      <section class="footer-social container">
+        <div class="social-icons">
+          <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
+          <ul class="social-list">
+            <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
+            <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
+          </ul>
+        </div>
 
-      <div class="footer-slogan">
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+        <div class="footer-slogan">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
     </footer>
 
     <section class="modal modal-feedback">
