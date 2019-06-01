@@ -8,93 +8,99 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header container">
-      <nav class="header-navigation">
-        <a class="header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
-        </a>
+    <header class="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <a class="header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+          </a>
 
-        <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li class="site-navigation-active"><a>Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+          <ul class="site-navigation">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li class="site-navigation-active"><a>Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
 
-        <ul class="basket">
-          <li><a class="basket-link" href="#">Корзина</a></li>
-        </ul>
-      </nav>
+          <ul class="basket">
+            <li><a class="basket-link" href="#">Корзина</a></li>
+          </ul>
+        </nav>
 
-      <h1>Магазин готовых шаблонов</h1>
+        <h1>Магазин готовых шаблонов</h1>
+    </div>
     </header>
 
-    <main class="main-content container">
-
+    <main class="main-catalog container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
-        <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="fields-cost">
+        <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
+
+          <!-- https://up.htmlacademy.ru/htmlcss/25/demos/2245 -->
+          <fieldset class="filter-price">
             <legend>Стоимость:</legend>
-            <div class="slider-range">
-              <div class="controls-range">
-                <div class="scale"><div class="bar"></div></div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
-              </div>
-              <div class="controls-price">
-                <label class="price-min">от <input name="price-min" type="text" value="0"></label>
-                <label class="price-max">до <input name="price-max" type="text" value="15 000"></label>
-              </div>
+            <div class="range-filter">
+                <div class="range-controls">  <!-- элемент RANGE с двумя ползунками -->
+                  <div class="scale">         <!-- полная ширина прогресс-бара -->
+                    <div class="bar"></div>   <!-- выбранный диапазон -->
+                  </div>
+                  <div class="toggle toggle-min"></div> <!-- ползунок минимальной границы диапазона  -->
+                  <div class="toggle toggle-max"></div> <!-- ползунок максимальной границы диапазона -->
+                </div>
+
+                <div class="price-controls">  <!-- поля для ввода цены -->
+                  <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="15 000"></label>
+                </div>
             </div>
-          </div>
+          </fieldset>
 
-          <div class="fields-grid">
+          <fieldset class="filter-grid">
             <legend>Сетка:</legend>
-            <ul class="filter-options">
-                <li>
-                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
-                  <label for="grid-id-adaptive">Адаптивная</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
-                  <label for="grid-id-fixed">Фиксированная</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber" disabled>
-                  <label for="grid-id-rubber">Резиновая</label>
-                </li>
-              </ul>
-          </div>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="adaptive" id="grid-id-adaptive" checked>
+                <label for="grid-id-adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="fixed" id="grid-id-fixed">
+                <label for="grid-id-fixed">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="rubber" id="grid-id-rubber" disabled>
+                <label for="grid-id-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <div class="fields-features">
+          <fieldset class="filter-features">
             <legend>Особенности:</legend>
-            <ul class="filter-options">
-                <li>
-                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
-                  <label for="feat-id-slider">Слайдер</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
-                  <label for="feat-id-advantages">Блок преимуществ</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
-                  <label for="feat-id-news">Новости</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
-                  <label for="feat-id-gallery">Галерея</label>
-                </li>
-                <li>
-                  <input class="visually-hidden filter-input type-checkbox" type="checkbox" name="basket" id="feat-id-basket" disabled>
-                  <label for="feat-id-basket">Корзина</label>
-                </li>
-              </ul>
-          </div>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="feat-id-slider" checked>
+                <label for="feat-id-slider">Слайдер</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="advantages" id="feat-id-advantages">
+                <label for="feat-id-advantages">Блок преимуществ</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="feat-id-news" checked>
+                <label for="feat-id-news">Новости</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="feat-id-gallery">
+                <label for="feat-id-gallery">Галерея</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="feat-id-basket" disabled>
+                <label for="feat-id-basket">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <button class="btn filter-submit" type="submit">Показать</button>
+          <button class="button filter-submit" type="submit">Показать</button>
         </form>
       </section>
 
@@ -213,7 +219,7 @@
           <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
           <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
           <p aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</p>
-          <p><a class="btn btn-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
+          <p><a class="button button-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
         </div>
 
         <div class="footer-contacts-map">
@@ -221,21 +227,23 @@
         </div>
       </section>
 
-      <section class="footer-social container">
-        <div class="social-icons">
-          <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
-          <ul class="social-list">
-            <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
-            <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
-            <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
-          </ul>
-        </div>
+      <div class="container">
+        <section class="footer-social">
+          <div class="social-icons">
+            <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
+            <ul class="social-list">
+              <li><a class="btn-soc btn-soc-vk" href="#" aria-label="Нёрдс ВКонтакте"><span class="visually-hidden">ВКонтакте</span></a></li>
+              <li><a class="btn-soc btn-soc-fb" href="#" aria-label="Нёрдс в Фейсбуке"><span class="visually-hidden">Фейсбук</span></a></li>
+              <li><a class="btn-soc btn-soc-ig" href="#" aria-label="Нёрдс в Инстаграме"><span class="visually-hidden">Инстаграм</span></a></li>
+            </ul>
+          </div>
 
-        <div class="footer-slogan">
-          <b>Давайте дружить, это выгодно!</b>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-        </div>
-      </section>
+          <div class="footer-slogan">
+            <b>Давайте дружить, это выгодно!</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </section>
+      </div>
     </footer>
 
     <section class="modal modal-feedback">

@@ -102,16 +102,16 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 }
 
-.header,
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
 /* ---------- Шапка сайта ---------- */
 .header {
   align-items: center;
   background-color: #eeeeee;
+}
+
+.header .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-navigation {
@@ -232,8 +232,14 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-active {
+  display: block;
   color: #000000;
   border-bottom: 2px solid #fb565a;
+}
+
+.main-index {
+  display: flex;
+  flex-direction: column;
 }
 
 /*------------------ Слайдер ------------------- */
@@ -615,8 +621,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/nerds-picture.png");
   background-repeat: no-repeat;
   background-position: 0 40px;
-
-  /*background-color: rgba(0,255,0,0.3);*/
 }
 
 /* таблица */
@@ -696,7 +700,6 @@ input[type="radio"].visually-hidden {
 
   width: 100%;
   position: relative;
-    /*background-color: rgba(0,255,0,0.3);*/
 }
 
 .partners-list li {
@@ -946,165 +949,184 @@ input[type="radio"].visually-hidden {
 }
 
 /* ---------- Каталог ---------- */
-.main-content {
+.main-catalog {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.filters-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-}
-
-.filters,
-.catalog {
-  padding-top: 60px;
-}
-
 .filters {
-  width: 260px;
+  margin: 0;
   margin-right: 140px;
+  width: 260px;
 }
 
-.catalog {
-  width: 760px;
-  margin-left: auto;
-}
+/* ++++++++++ Сложный фильтр +++++++++++ */
+/* |                                   | */
+/* ------------ фильтр цены ------------ */
+.filter-price {
+  margin: 55px 0;
+  padding: 0;
 
-/* ---------- Форма фильтра ---------- */
-.filters fieldset {
   border: none;
 }
 
-.filters legend {
-  font-weight: 700;   /* Roboto Bold */
+.range-filter {
+  width: 260px;
+  margin-top: 48px;
+}
+
+.filter-price legend {
   font-size: 18px;
   line-height: 30px;
+  font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
-
-  margin: 0;
-  padding: 0;
-
-  background-color: rgba(255, 128, 255, 0.3); /* временно */
 }
 
-/* ---------- Элемент управления RANGE с двумя ползунками ---------- */
-/* ----- и полями ввода минимального и максимального значения ------ */
-.slider-range {
-  width: 261px;
-  margin-bottom: 60px;
-}
-
-.controls-range {
+.range-controls {
   position: relative;
-  height: 41px;  /* padding-top + толщина шкалы */
 
-  padding-top: 39px;
+  height: 42px;
+  margin-bottom: 13px;
+  padding-top: 38px;
   padding-right: 21px;
   padding-left: 21px;
-  margin-bottom: 13px;
 
   background-color: #eeeeee;
   border-radius: 3px;
 }
 
-.controls-range .scale {
-  width: 219px;
+.range-controls .scale {
   height: 2px;
-  background-color: #d7dcde;
+
+  background: #d7dcde;
 }
 
-.controls-range .bar {
-  width: 152px;
+.range-controls .bar {
+  width: 70%;
   height: 2px;
+
   background: #00ca74;
 }
 
-.controls-range .toggle {
+.range-controls .toggle {
   position: absolute;
+  top: 29px;
+  left: 0;
+
   width: 4px;
   height: 4px;
-  top: 30px;
-  left: 0;
   padding: 0;
-  background-color: #ababab;
+
   border: 8px solid #ffffff;
-  border-radius: 50%;
+  background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+
   cursor: pointer;
 }
 
-.controls-range .toggle-min {
-  left: 20px;
+.range-controls .toggle-min {
+  left: 18px;
 }
 
-.controls-range .toggle-max {
+.range-controls .toggle-max {
   left: 160px;
 }
 
-.controls-price {
-  width: 290px;
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;   /* Roboto Regular */
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.price-controls {
   font-size: 0;
 }
 
-.controls-price label {
-  display: inline-block;
-  font-weight: 400;   /* Roboto Regular */
-  font-size: 16px;
-  width: 50%;
-  text-transform: uppercase;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.controls-price input {
-  font: inherit;
-  font-weight: 400;   /* Roboto Regular */
-  font-size: 16px;
-  line-height: 22px;
+.price-controls input {
   width: 60px;
   padding: 8px 10px;
-  margin-left: 10px;
+  margin-left: 11px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;   /* Roboto Regular */
+
   text-align: center;
   color: #283136;
-  background: #eeeeee;
+
   border: none;
-  /*border: 2px solid #d7dcde;*/
+  outline: none;
   border-radius: 3px;
+  background: #eeeeee;
 }
 
-/*.controls-price input:hover {
-  outline: 2px solid #b4b9bb;
+.max-price {
+  text-align: right;
 }
-*/
 
-/*.controls-price input:focus {
-  outline: 2px solid #000000;
+/* --- сетка (radio-buttons) и  ---
+   --- особенности (checkboxes) --- */
+.filter-grid,
+.filter-features {
+  margin: 0;
+  padding: 0;
+
+  width: 260px;
+  border: none;
 }
-*/
-/*-------------------------------------------------------------*/
 
-.filter-options {
+.filter-grid{
+  margin-bottom: 28px;
+}
+
+.filter-features {
+  margin-bottom: 32px;
+}
+
+.filter-grid legend,
+.filter-features legend {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;   /* Roboto Bold */
+  text-transform: uppercase;
+}
+
+.filter-grid ul,
+.filter-features ul {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
-.filter-options li {
-  display: block;
-  position: relative;
+.filter-option {
   margin-bottom: 16px;
+  padding-left: 35px;
 }
 
-.filter-input + label {
-  line-height: 20px;
-  color: #283136;
+.filter-option label {
+  position: relative;
+
+  display: block;
+
   cursor: pointer;
+  user-select: none;
 }
 
-.filter-input + label:hover,
-.filter-input + label:focus {
+.filter-input + label,
+.filter-input:hover + label,
+.filter-input:focus + label {
   color: #283136;
 }
 
@@ -1113,79 +1135,111 @@ input[type="radio"].visually-hidden {
   cursor: default;
 }
 
-.type-radio + label::before {
+.filter-input-radio + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
+  left: -35px;
+
   width: 25px;
   height: 25px;
+
   opacity: 0.4;
-  background-color: #4d4d4d;
-  background: url("../img/radio-off.svg") no-repeat 0 0;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.type-radio + label:hover::before,
-.type-radio + label:focus::before {
-  opacity: 1;
-}
-
-.type-radio:checked + label::before {
-  opacity: 1;
-  background-image: url("../img/radio-on.svg");
-}
-
-.type-checkbox + label::before {
+.filter-input-radio:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
+  left: -35px;
+
+  width: 25px;
+  height: 25px;
+
+  opacity: 1;
+
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+
+  width: 23px;
+  height: 23px;
+
+  opacity: 0.4;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+
   width: 27px;
   height: 23px;
-  opacity: 0.4;
-  background-color: #4d4d4d;
-  background: url("../img/checkbox-off.svg") no-repeat 0 0;
-}
 
-.type-checkbox + label:hover::before,
-.type-checkbox + label:focus::before {
   opacity: 1;
-}
 
-.type-checkbox:checked + label::before {
-  width: 25px;
-  height: 25px;
-  opacity: 1;
   background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.type-radio[disabled] + label::before,
-.type-checkbox[disabled] + label::before {
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:focus::before,
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before {
+  opacity: 1;
+}
+
+.filter-input-radio[disabled] + label::before,
+.filter-input-checkbox[disabled] + label::before {
   opacity: 0.1;
   cursor: default;
 }
 
+/* --- кнопка "Показать" (submit) --- */
 .filter-submit {
   width: 260px;
   height: 50px;
-  font-weight: 500;   /* Roboto Medium */
+
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;   /* Roboto Medium */
+
   color: #000000;
   background-color: #eeeeee;
 }
 
 .filter-submit:hover,
 .filter-submit:focus {
+  outline: none;
   background-color: #dfdfdf;
 }
 
 .filter-submit:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
+/* ++++++++++++++++++++++++++++++++++++ */
 
+ /* ---------- Сортировка ---------- */
  .sort-title {
   font-weight: 700;   /* Roboto Bold */
   font-size: 18px;
