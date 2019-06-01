@@ -94,15 +94,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
-
 /* ----------- Центровщик ---------- */
-/*.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 140px;
-}
-*/
-
 .container {
   width: 1440px;
   margin: 0 auto;
@@ -117,7 +109,6 @@ input[type="radio"].visually-hidden {
 }
 
 /* ---------- Шапка сайта ---------- */
-
 .header {
   align-items: center;
   background-color: #eeeeee;
@@ -251,12 +242,6 @@ input[type="radio"].visually-hidden {
 
 .slider {
   position: relative;
-  box-sizing: border-box;
-
-  width: 1440px;
-  padding: 0 140px;
-  margin: 0 auto;
-
   background-color: #eeeeee;
 }
 
@@ -311,13 +296,13 @@ input[type="radio"].visually-hidden {
 
 .slider-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding: 60px 0 80px 0;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/slide-picture-1.png");
   background-repeat: no-repeat;
-  background-position: 93% 18px;
+  background-position: 93% 0px;
 }
 
 .slider-item:nth-child(2) {
@@ -465,6 +450,7 @@ input[type="radio"].visually-hidden {
 
 .service-item p {
   padding-right: 40px;
+  margin-bottom: 35px;
 
   font-size: 16px;
   line-height: 24px;
@@ -474,61 +460,49 @@ input[type="radio"].visually-hidden {
   text-align: left;
 }
 
-.btn-order {
-  display: inline-block;
-  margin-top: 35px;
-
-  font-size: 16px;
-  /*line-height: 18px;*/
-  line-height: 50px;
-  font-weight: 500;   /* Roboto Medium */
+.button-order {
+  padding: 18px 0;
 
   width: 160px;
   height: 50px;
-  text-align: center;
 }
 
-.btn-order:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.btn-sites {
+.button-sites {
   background-color: #fb565a;
 }
 
-.btn-sites:hover,
-.btn-sites:focus {
+.button-sites:hover,
+.button-sites:focus {
   background-color: #e74246;
 }
 
-.btn-sites:active {
+.button-sites:active {
   background-color: #d7373b;
 }
 
-.btn-apps {
+.button-apps {
   background-color: #00ca74;
 }
 
-.btn-apps:hover,
-.btn-apps:focus {
+.button-apps:hover,
+.button-apps:focus {
   background-color: #00bc6c;
 }
 
-.btn-apps:active {
+.button-apps:active {
   background-color: #00aa62;
 }
 
-.btn-presentations {
+.button-presentations {
   background-color: #efc84a;
 }
 
-.btn-presentations:hover,
-.btn-presentations:focus {
+.button-presentations:hover,
+.button-presentations:focus {
   background-color: #eab534;
 }
 
-.btn-presentations:active {
+.button-presentations:active {
   background-color: #e5a722;
 }
 
@@ -537,41 +511,55 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 
-  padding: 80px 0;
+  padding: 0;
+  padding-bottom: 80px;
 
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
 }
 
+.about-column-left {
+  width: 650px;
+  /*background-color: rgba(255,0,0,0.3);*/
+}
+
 .about-column-left,
 .about-column-right {
-  width: 650px;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-column-left {
-  margin-right: 150px;
-}
+.about-studio {
+  display: block;
+  position: relative;
 
-.about-title {
+  padding: 80px 0 35px;
+
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;   /* Roboto Medium */
-
-  width: 647px;
-  height: 87px;
 
   text-align: left;
   color: #000000;
 }
 
 .about-principles {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+
   text-align: left;
   color: #283136;
 }
 
-.about-orders-title {
+.about-subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
   text-align: left;
@@ -579,7 +567,18 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.about-orders-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+
+  list-style: none;
+}
+
 .about-orders-list li {
+  position: relative;
+  margin-bottom: 24px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;   /* Roboto Regular */
@@ -588,14 +587,39 @@ input[type="radio"].visually-hidden {
   color: #283136;
 }
 
-/* таблица */
-.about-table-title {
-  font-weight: 700;   /* Roboto Bold */
-  text-transform: uppercase;
-  text-align: left; /* center */
-  color: #000000;
+.about-orders-list li::before {
+  content: "";
+
+  position: absolute;
+  left: -36px;
+  top: 8px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #fb565a;
 }
 
+
+.about-orders-list li:last-child {
+  margin-bottom: 0;
+}
+
+.about-logo {
+  display: block;
+  position: relative;
+  font-style: 0;
+
+  width: 360px;
+  height: 280px;
+  background-image: url("../img/nerds-picture.png");
+  background-repeat: no-repeat;
+  background-position: 0 40px;
+
+  /*background-color: rgba(0,255,0,0.3);*/
+}
+
+/* таблица */
 .about-table {
   display: flex;
   flex-direction: column;
@@ -614,12 +638,14 @@ input[type="radio"].visually-hidden {
   width: 95px;
 }
 
-.about-table th {
-  /*display: table-cell;*/
+.about-table tr {
+  display: flex;
+  flex-direction: row;
+}
 
-  padding-top: 27px;
-  /*padding-bottom: 27px;*/
+.about-table th {
   margin-right: 25px;
+  padding: 0;
 
   font-family: inherit;
   font-size: 16px;
@@ -630,9 +656,8 @@ input[type="radio"].visually-hidden {
 }
 
 .about-table td {
-  /*display: table-cell;*/
-
   margin-right: 25px;
+  padding-bottom: 26px;
 
   font-family: inherit;
   font-size: 45px;
@@ -650,19 +675,46 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Наши партнёры ---------- */
 .partners {
-  padding: 80px 0;
-
+  padding: 0;
+  padding-top: 46px;
+  padding-bottom: 44px;
   background-color: #ffffff;
+
   border-bottom: 2px solid #eeeeee;
 }
 
 .partners-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  position: relative;
+    /*background-color: rgba(0,255,0,0.3);*/
 }
+
 .partners-list li {
-  display: inline-block;
   width: 260px;
 }
+
+.partner-item::after {
+  content: "";
+
+  position: absolute;
+
+  height: 52px;
+  left: 280px;
+
+  background-color: inherit;
+  border-right: 2px solid #eeeeee;
+}
+
 
 .partner-item .partner-logo {
   opacity: 0.2;
@@ -684,6 +736,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   background-color: #ffffff;
 }
 
@@ -695,18 +748,17 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts-detail {
   display: block;
+  padding: 50px;
 
   position: absolute;
   top: 54px;
   left: 140px;
+  z-index: 2;
 
   width: 219px;
   height: 208px;
 
-  padding: 50px;
-
   background-color: #ffffff;
-  z-index: 2;
 }
 
 .footer-contacts-detail b {
@@ -727,32 +779,11 @@ input[type="radio"].visually-hidden {
   color: #666666;
 }
 
-.btn-write {
-  display: inline-block;
-
-  font-size: 16px;
-  line-height: 50px; /*18px*/
-  font-weight: 500;   /* Roboto Medium */
+.button-write {
+  padding: 18px 0;
 
   width: 219px;
   height: 50px;
-  text-align: center;
-
-  color: #ffffff;
-  background-color: #fb565a;
-  border-radius: 3px;
-}
-
-.btn-write:hover,
-.btn-write:focus {
-  background-color: #e74246;
-}
-
-.btn-write:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #d7373b;
 }
 
 /* ---------- Карта ---------- */
@@ -766,15 +797,18 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts-map::after {
   content: "";
+
   position: absolute;
   top: 89px;
   left: 820px;
+  z-index: 1;
 
   width: 231px;
   height: 190px;
 
   background-image: url("../img/map-marker.png");
-  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* ---------- социальные сети ---------- */
