@@ -773,20 +773,28 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts-detail {
   display: block;
-  padding: 50px;
+  box-sizing: border-box;
+
+  padding-top: 49px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 48px;
 
   position: absolute;
   top: 54px;
   left: 140px;
   z-index: 2;
 
-  width: 219px;
-  height: 208px;
+  width: 319px;
+  height: 308px;
 
   background-color: #ffffff;
 }
 
 .footer-contacts-detail b {
+  padding: 0;
+  margin: 0;
+
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;   /* Roboto Bold */
@@ -796,12 +804,19 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-contacts-detail p {
+  padding: 0;
+  margin: 0;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;   /* Roboto Regular */
 
   text-align: left;
   color: #666666;
+}
+
+.footer-contacts-detail p:nth-child(1) {
+  margin-top: 23px;
 }
 
 .button-write {
@@ -981,7 +996,7 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: space-between;
 
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .filters {
@@ -994,8 +1009,9 @@ input[type="radio"].visually-hidden {
 /* |                                   | */
 /* ------------ фильтр цены ------------ */
 .filter-price {
-  margin: 35px 0;
   padding: 0;
+  margin: 0;
+  margin-top: 35px;
 
   border: none;
 }
@@ -1081,7 +1097,7 @@ input[type="radio"].visually-hidden {
 .price-controls input {
   width: 60px;
   padding: 8px 10px;
-  margin-left: 11px;
+  margin-left: 12px;
 
   font-family: inherit;
   font-size: 16px;
@@ -1113,17 +1129,19 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-grid{
-  margin-bottom: 28px;
+  margin-top: 55px;
 }
 
 .filter-features {
-  margin-bottom: 32px;
+  margin-top: 29px;
 }
 
 .filter-grid legend,
 .filter-features legend {
   margin: 0;
   margin-bottom: 12px;
+  padding: 0;
+  padding-bottom: 2px;
 
   font-size: 18px;
   line-height: 30px;
@@ -1141,7 +1159,7 @@ input[type="radio"].visually-hidden {
 
 .filter-option {
   margin-bottom: 16px;
-  padding-left: 35px;
+  padding-left: 36px;
 }
 
 .filter-option label {
@@ -1234,12 +1252,11 @@ input[type="radio"].visually-hidden {
 
 /* --- кнопка "Показать" (submit) --- */
 .filter-submit {
+  margin-top: 34px;
+  padding: 17px 0;
+
   width: 260px;
   height: 50px;
-
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;   /* Roboto Medium */
 
   color: #000000;
   background-color: #eeeeee;
@@ -1247,8 +1264,11 @@ input[type="radio"].visually-hidden {
 
 .filter-submit:hover,
 .filter-submit:focus {
-  outline: none;
   background-color: #dfdfdf;
+}
+
+.filter-submit:focus {
+  outline: none;
 }
 
 .filter-submit:active {
@@ -1383,9 +1403,10 @@ input[type="radio"].visually-hidden {
 .catalog-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 
+  width: 100%;
   margin: 0;
   padding: 0;
   padding-bottom: 60px;
@@ -1395,8 +1416,11 @@ input[type="radio"].visually-hidden {
 .catalog-item {
   display: block;
   position: relative;
-  margin-top: 30px;
-  /*margin-right: 40px;*/
+
+  margin-top: 33px;
+  width: 360px;
+
+  border-radius: 5px;
   outline: none;
 }
 
