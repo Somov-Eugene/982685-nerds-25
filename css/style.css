@@ -953,6 +953,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  margin: 20px 0;
 }
 
 .filters {
@@ -965,7 +967,7 @@ input[type="radio"].visually-hidden {
 /* |                                   | */
 /* ------------ фильтр цены ------------ */
 .filter-price {
-  margin: 55px 0;
+  margin: 35px 0;
   padding: 0;
 
   border: none;
@@ -1241,9 +1243,12 @@ input[type="radio"].visually-hidden {
 
  /* ---------- Сортировка ---------- */
  .sort-title {
-  font-weight: 700;   /* Roboto Bold */
+  margin: 35px 0;
+  padding: 0;
+
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
   text-align: left;
   color: #000000;
@@ -1537,7 +1542,171 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* всплывающие элементы (pop-up) сейчас временно скрыты (до раздела 7) */
+/* --- модальное окно (pop-up) формы обраной связи --- */
 .modal {
-  display: none;
+  display: block;
+  position: relative;
+}
+
+.modal-feedback {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 84px;
+
+  width: 760px;
+  height: 436px;
+
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-feedback h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 42px;
+
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;   /* Roboto Medium */
+
+  text-align: left;
+  color: #000000;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.feedback-form label {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;   /* Roboto Bold */
+
+  text-align: left;
+  color: #000000;
+}
+
+.feedback-form p {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input {
+  padding: 18px 15px;
+  margin-bottom: 36px;
+  box-sizing: border-box;
+
+  width: 360px;
+  height: 50px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
+  color: rgba(68, 68, 68, 0.5);
+  background-color: #ffffff;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.feedback-form input:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-form input:focus {
+  outline: none;
+
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.feedback-form input:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
+}
+
+.feedback-form textarea {
+  padding: 14px 15px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+
+  width: 760px;
+  height: 118px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
+  color: rgba(68, 68, 68, 0.5);
+  background-color: #ffffff;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  resize: none;
+  cursor: pointer;
+}
+
+.feedback-form textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-form textarea:focus {
+  outline: none;
+
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.feedback-form textarea:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
+}
+
+.feedback-submit {
+  padding: 18px 0;
+
+  width: 260px;
+  height: 50px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: #ffffff;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.1;
 }
