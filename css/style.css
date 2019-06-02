@@ -142,19 +142,22 @@ input[type="radio"].visually-hidden {
   min-height: 223px;
 }
 
-.header-logo {
+.header-logo {              /*   покой   */
   width: 160px;
   height: 65px;
   margin-right: 202px;
 }
 
-.header-logo:hover,
-.header-logo:focus {
-  outline: none;
+.header-logo[href]:hover,   /* наведение */
+.header-logo[href]:focus {  /*   фокус   */
   opacity: 0.8;
 }
 
-.header-logo:active {
+.header-logo[href]:focus {  /*   фокус   */
+  outline: none;
+}
+
+.header-logo[href]:active { /*  нажатие  */
   opacity: 0.3;
 }
 
