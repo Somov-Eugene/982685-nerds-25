@@ -28,7 +28,16 @@
        url("../fonts/roboto-bold.woff") format("woff");
 }
 
-/* ---------- Общие элементы ---------- */
+
+/*
+Критерий Д25. Нет глобальных стилей тегов
+Исключения:
+ - Normalize.css, который исправляет браузерные умолчания
+ - Уникальные теги документа: ⁠⁠⁠⁠html, body
+ - Дополнительная нормализация: a⁠⁠⁠⁠ и ⁠⁠⁠⁠img⁠⁠⁠⁠
+*/
+
+/* --------- Общие элементы -------- */
 body {
   margin: 0;
   padding: 0;
@@ -48,6 +57,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -63,7 +76,8 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.button {
+/*    состояния кнопок       */
+.button {           /* покой */
   display: block;
   box-sizing: border-box;
 
@@ -82,17 +96,18 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-.button:hover,
-.button:focus {
+.button:hover,      /* наведение */
+.button:focus {     /* фокус     */
   background-color: #e74246;
 }
 
-.button:active {
+.button:active {    /* нажатие   */
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #d7373b;
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
+/* --------------------------------- */
 
 /* ----------- Центровщик ---------- */
 .container {
@@ -933,6 +948,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   flex-basis: 545px;
+
   margin-left: 139px;
 }
 
@@ -948,6 +964,10 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-slogan p {
+  padding: 0;
+
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;   /* Roboto Regular */
@@ -1133,18 +1153,21 @@ input[type="radio"].visually-hidden {
   user-select: none;
 }
 
-.filter-input + label,
-.filter-input:hover + label,
-.filter-input:focus + label {
+/* состояния меток (label) радиокнопок и чекбоксов:   */
+.filter-input + label,                /* покой        */
+.filter-input:hover + label,          /* наведение    */
+.filter-input:focus + label {         /* фокус        */
   color: #283136;
 }
 
-.filter-input[disabled] + label {
+.filter-input[disabled] + label {     /* заблокирован */
   color: rgba(40, 49, 54, 0.3);
   cursor: default;
 }
 
-.filter-input-radio + label::before {
+/* состояние покоя псевдоэлемента ::before радиокнопок */
+.filter-input-radio + label::before,
+.filter-input-radio:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1155,28 +1178,21 @@ input[type="radio"].visually-hidden {
 
   opacity: 0.4;
 
-  background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-radio + label::before{                /* ВЫКЛ */
+  background-image: url("../img/radio-off.svg");
 }
 
 .filter-input-radio:checked + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -35px;
-
-  width: 25px;
-  height: 25px;
-
-  opacity: 1;
-
-  background-image: url("../img/radio-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-image: url("../img/radio-on.svg");     /* ВКЛ  */
 }
 
-.filter-input-checkbox + label::before {
+/* состояние покоя псевдоэлемента ::before чекбоксов */
+.filter-input-checkbox + label::before,
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1187,35 +1203,28 @@ input[type="radio"].visually-hidden {
 
   opacity: 0.4;
 
-  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox + label::before {
+  background-image: url("../img/checkbox-off.svg"); /* ВЫКЛ */
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -35px;
-
-  width: 27px;
-  height: 23px;
-
-  opacity: 1;
-
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-image: url("../img/checkbox-on.svg");  /* ВКЛ  */
 }
 
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:focus::before,
+
+/* состояния псевдоэлемента ::before радиокнопок и чекбоксов    */
+.filter-input-radio + label:hover::before,      /* наведение    */
+.filter-input-radio + label:focus::before,      /* фокус        */
 .filter-input-checkbox + label:hover::before,
 .filter-input-checkbox + label:focus::before {
   opacity: 1;
 }
 
-.filter-input-radio[disabled] + label::before,
+.filter-input-radio[disabled] + label::before,  /* заблокирован */
 .filter-input-checkbox[disabled] + label::before {
   opacity: 0.1;
   cursor: default;
