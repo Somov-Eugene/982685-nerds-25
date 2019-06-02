@@ -806,6 +806,7 @@ input[type="radio"].visually-hidden {
 .footer-contacts-detail p {
   padding: 0;
   margin: 0;
+  margin-top: 23px;
 
   font-size: 16px;
   line-height: 18px;
@@ -815,11 +816,8 @@ input[type="radio"].visually-hidden {
   color: #666666;
 }
 
-.footer-contacts-detail p:nth-child(1) {
-  margin-top: 23px;
-}
-
 .button-write {
+  margin-top: 32px;
   padding: 17px 0;
 
   width: 219px;
