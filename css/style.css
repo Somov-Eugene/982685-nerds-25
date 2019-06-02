@@ -954,7 +954,7 @@ input[type="radio"].visually-hidden {
 
 .footer-slogan b {
   padding: 0;
-  padding-top: 9px;
+  padding-top: 6px;
 
   font-size: 36px;
   line-height: 36px;
@@ -1176,6 +1176,7 @@ input[type="radio"].visually-hidden {
   width: 25px;
   height: 25px;
 
+  color: #4d4d4d;
   opacity: 0.4;
 
   background-repeat: no-repeat;
@@ -1201,6 +1202,7 @@ input[type="radio"].visually-hidden {
   width: 23px;
   height: 23px;
 
+  color: #4d4d4d;
   opacity: 0.4;
 
   background-repeat: no-repeat;
