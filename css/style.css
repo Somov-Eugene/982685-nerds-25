@@ -389,7 +389,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-item-button {
-  padding: 18px 0;
+  padding: 17px 0;
 
   width: 240px;
   height: 50px;
@@ -444,7 +444,7 @@ input[type="radio"].visually-hidden {
 .service-item h3 {
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 26px;
 
   font-size: 24px;
   line-height: 30px;
@@ -455,8 +455,10 @@ input[type="radio"].visually-hidden {
 }
 
 .service-item p {
-  padding-right: 40px;
-  margin-bottom: 35px;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  padding-top: 16px;
 
   font-size: 16px;
   line-height: 24px;
@@ -467,7 +469,9 @@ input[type="radio"].visually-hidden {
 }
 
 .button-order {
-  padding: 18px 0;
+  margin: 0;
+  margin-top: 32px;
+  padding: 17px 0;
 
   width: 160px;
   height: 50px;
@@ -783,7 +787,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-write {
-  padding: 18px 0;
+  padding: 17px 0;
 
   width: 219px;
   height: 50px;
@@ -1677,7 +1681,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-submit {
-  padding: 18px 0;
+  padding: 17px 0;
 
   width: 260px;
   height: 50px;
