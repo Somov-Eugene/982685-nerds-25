@@ -31,7 +31,8 @@
     </div>
     </header>
 
-    <main class="main-catalog container">
+    <main class="container">
+      <div class="main-catalog">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
@@ -209,6 +210,7 @@
           <li class="pagination-item pagination-next"><a href="#" aria-label="Перейти на следующую страницу">следующая</a></li>
         </ul>
       </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -256,15 +258,13 @@
         </p>
         <p>
           <label for="user-mail-id">Ваш e-mail:</label>
-          <input class="msg-mail" id="user-mail-id" type="email" name="user-mail" placeholder="email@example.com" aria-label="Введите Ваш адрес электронной почты">
+          <input class="msg-mail" id="user-mail-id" type="text" name="user-mail" placeholder="email@example.com" aria-label="Введите Ваш адрес электронной почты">
         </p>
         <p>
           <label for="msg-text-id">Текст письма:</label>
           <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме" aria-label="Введите Ваше сообщение в свободной форме"></textarea>
         </p>
-        <p>
-          <button class="button feedback-submit" type="submit">Отправить</button>
-        </p>
+        <button class="button feedback-submit" type="submit">Отправить</button>
       </form>
 
       <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи"><span class="visually-hidden">Закрыть</span></button>
