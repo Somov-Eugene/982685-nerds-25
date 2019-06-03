@@ -28,19 +28,37 @@
        url("../fonts/roboto-bold.woff") format("woff");
 }
 
-/* ---------- Общие элементы ---------- */
+
+/*
+Критерий Д25. Нет глобальных стилей тегов
+Исключения:
+ - Normalize.css, который исправляет браузерные умолчания
+ - Уникальные теги документа: ⁠⁠⁠⁠html, body
+ - Дополнительная нормализация: a⁠⁠⁠⁠ и ⁠⁠⁠⁠img⁠⁠⁠⁠
+*/
+
+/* --------- Общие элементы -------- */
 body {
+  margin: 0;
+  padding: 0;
+  min-width: 1440px;
+
   font-family: "Roboto", Arial, sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 400;   /* Roboto Regular */
+
   color: #000000;
   background-color: #ffffff;
 }
 
 a {
-  outline: none;
+  /*outline: none;*/
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -58,40 +76,160 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.btn {
-  text-align: center;
-  vertical-align: middle;
+/*    состояния кнопок       */
+.button {           /* покой */
+  display: block;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;     /* Roboto Medium */
+
   text-transform: uppercase;
-  outline: none;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: #fb565a;
+  border-radius: 3px;
   border: none;
+  outline: none;
+}
+
+.button:hover,      /* наведение */
+.button:focus {     /* фокус     */
+  background-color: #e74246;
+}
+
+.button:active {    /* нажатие   */
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #d7373b;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+/* --------------------------------- */
+
+/* ----------- Центровщик ---------- */
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 140px;
+  box-sizing: border-box;
 }
 
 /* ---------- Шапка сайта ---------- */
 .header {
+  align-items: center;
   background-color: #eeeeee;
 }
 
-.header-logo {
-  width: 160px;
-  height: 65px;
+.header .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header-logo:hover,
-.header-logo:focus {
+.header-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 49px;
+  padding-bottom: 18px;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;   /* Roboto Medium */
+  color: #000000;
+
+  min-height: 223px;
+}
+
+.header-logo {              /*   покой   */
+  width: 160px;
+  height: 65px;
+  margin-right: 202px;
+}
+
+.header-logo[href]:hover,   /* наведение */
+.header-logo[href]:focus {  /*   фокус   */
   opacity: 0.8;
 }
 
-.header-logo:active {
+.header-logo[href]:focus {  /*   фокус   */
+  outline: none;
+}
+
+.header-logo[href]:active { /*  нажатие  */
   opacity: 0.3;
 }
 
 .site-navigation,
-.basket {
-  font-weight: 500;
+.basket
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   font-size: 16px;
   line-height: 30px;
+  font-weight: 500;   /* Roboto Medium */
   text-transform: uppercase;
+
   list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+}
+
+.site-navigation {
+  justify-content: flex-start;
+  width: 600px;
+}
+
+.site-navigation li {
+  margin-right: 45px;
+}
+
+.site-navigation li:last-child {
+  margin-right: 0;
+}
+
+.basket {
+  justify-content: flex-end;
+  width: 120px;
+  margin-left: auto;
+}
+
+.basket-link {
+  display: block;
+  position: relative;
+}
+
+.basket-link::before {
+  content:"";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+
+  top: 7px;
+  left: -40px;
+
+  background-color: red;
+  background: url("../img/icon-basket.svg") no-repeat 0 0;
+  opacity: 0.3;
 }
 
 .site-navigation a,
@@ -112,218 +250,496 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-active {
+  display: block;
   color: #000000;
   border-bottom: 2px solid #fb565a;
 }
 
-/*---------- Слайдер ---------- */
-.sliders-list {
+.main-index {
+  display: flex;
+  flex-direction: column;
+}
+
+/*------------------ Слайдер ------------------- */
+/*  https://up.htmlacademy.ru/htmlcss/25/demos/  */
+/*     (переключение слайдов с помощью CSS)      */
+
+.slider {
+  position: relative;
+  background-color: #eeeeee;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.slider-item {
+  display: none;
+  padding: 60px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/slide-picture-1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 0px;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("../img/slide-picture-2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("../img/slide-picture-3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+/*
+  Критерий Д6. Для стилизации не использованы #id
+  Важно: использовать атрибут id в HTML-разметке можно и нужно.
+  Например, для привязки полей к подписям в формах.
+*/
+
+/*
+  Критерий Д7. Нет вложенности селекторов больше двух
+  Важно: допускается использовать селекторы с вложенностью больше двух
+  при оживлении слайдеров на чистом CSS
+*/
+
+#advantage-1-id:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#advantage-2-id:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#advantage-3-id:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#advantage-1-id:checked ~ .slider-controls .slider-controls-item--1::before,
+#advantage-2-id:checked ~ .slider-controls .slider-controls-item--2::before,
+#advantage-3-id:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  z-index: 2;
+
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
 .slider-item h3 {
-  font-weight: 500;
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+
   font-size: 55px;
   line-height: 55px;
+  font-weight: 500;   /* Roboto Medium */
+
   text-align: left;
   color: #000000;
 }
 
 .slider-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+
   text-align: left;
   color: #283136;
 }
 
-.btn-slider-details    {
-  display: inline-block;
-  font-weight: 500;
+.slider-item-button {
+  padding: 17px 0;
+
   width: 240px;
   height: 50px;
-  line-height: 50px;
-  color: #ffffff;
-  background-color: #fb565a;
-  border-radius: 3px;
 }
 
-.btn-slider-details:hover,
-.btn-slider-details:focus {
-  background-color: #e74246;
-}
-
-.btn-slider-details:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #d7373b;
-}
 
 /* ---------- Наши услуги ---------- */
 .services {
+  padding: 80px 0;
+
   background-color: #ffffff;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .services-list {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .service-item {
-  text-align: left;
+  width: 300px;
+  margin-right: 100px;
+  padding-top: 145px;
+}
+
+.service-item:last-child {
+  margin-right: 0;
+}
+
+.service-item:nth-child(1) {
+  background-image: url("../img/advantage-picture-red.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
+}
+
+.service-item:nth-child(2) {
+  background-image: url("../img/advantage-picture-green.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
+}
+
+.service-item:nth-child(3) {
+  background-image: url("../img/advantage-picture-yellow.png");
+  background-repeat: no-repeat;
+  background-size: 100% 145px;
 }
 
 .service-item h3 {
-  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;   /* Bold */
+
   text-transform: uppercase;
+  text-align: left;
 }
 
-.btn-order {
-  display: inline-block;
-  font-weight: 500;
+.service-item p {
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  padding-top: 16px;
+
   font-size: 16px;
-  line-height: 18px;
-  text-align: center;
+  line-height: 24px;
+  font-weight: 400;   /* Roboto Regular */
+
+  color: #283136;
+  text-align: left;
+}
+
+.button-order {
+  margin: 0;
+  margin-top: 32px;
+  padding: 17px 0;
+
   width: 160px;
   height: 50px;
-  line-height: 50px;
-  color: #ffffff;
-  border-radius: 3px;
 }
 
-.btn-order:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.btn-sites {
+.button-sites {
   background-color: #fb565a;
 }
 
-.btn-sites:hover,
-.btn-sites:focus {
+.button-sites:hover,
+.button-sites:focus {
   background-color: #e74246;
 }
 
-.btn-sites:active {
+.button-sites:active {
   background-color: #d7373b;
 }
 
-.btn-apps {
+.button-apps {
   background-color: #00ca74;
 }
 
-.btn-apps:hover,
-.btn-apps:focus {
+.button-apps:hover,
+.button-apps:focus {
   background-color: #00bc6c;
 }
 
-.btn-apps:active {
+.button-apps:active {
   background-color: #00aa62;
 }
 
-.btn-presentations {
+.button-presentations {
   background-color: #efc84a;
 }
 
-.btn-presentations:hover,
-.btn-presentations:focus {
+.button-presentations:hover,
+.button-presentations:focus {
   background-color: #eab534;
 }
 
-.btn-presentations:active {
+.button-presentations:active {
   background-color: #e5a722;
 }
 
 /* ---------- Коротко о нас ---------- */
 .about {
-  margin-bottom: 77px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  padding: 0;
+  padding-bottom: 80px;
+
   background-color: #ffffff;
+  border-bottom: 2px solid #eeeeee;
 }
 
-.about-title {
-  font-weight: 500;
+.about-column-left {
+  width: 650px;
+  /*background-color: rgba(255,0,0,0.3);*/
+}
+
+.about-column-left,
+.about-column-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-studio {
+  display: block;
+  position: relative;
+
+  padding: 80px 0 35px;
+
   font-size: 45px;
   line-height: 45px;
-  width: 647px;
-  height: 87px;
+  font-weight: 500;   /* Roboto Medium */
+
   text-align: left;
   color: #000000;
 }
 
 .about-principles {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+
   text-align: left;
   color: #283136;
 }
 
-.about-orders-title {
-  font-weight: 700;
+.about-subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
   text-align: left;
+
   color: #000000;
+}
+
+.about-orders-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+
+  list-style: none;
 }
 
 .about-orders-list li {
-  font-weight: 400;
+  position: relative;
+  margin-bottom: 24px;
+
   font-size: 16px;
   line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
   text-align: left;
   color: #283136;
 }
 
-/* таблица */
-.about-table-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: left; /* center */
-  color: #000000;
+.about-orders-list li::before {
+  content: "";
+
+  position: absolute;
+  left: -36px;
+  top: 8px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #fb565a;
 }
 
-.about-table {
-  display: table;
-  /*position: relative;*/
+
+.about-orders-list li:last-child {
+  margin-bottom: 0;
+}
+
+.about-logo {
+  display: block;
+  position: relative;
+  font-style: 0;
+
   width: 360px;
-  text-align: left;
+  height: 280px;
+  background-image: url("../img/nerds-picture.png");
+  background-repeat: no-repeat;
+  background-position: 0 40px;
+}
+
+/* таблица */
+.about-table {
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
   border-collapse: collapse;
 }
 
+.about-table thead {
+  order: 1;
+  width: 95px;
+}
+
+.about-table tbody {
+  order: 0;
+  width: 95px;
+}
+
+.about-table tr {
+  display: flex;
+  flex-direction: row;
+}
+
 .about-table th {
-  display: table-cell;
+  margin-right: 25px;
+  padding: 0;
+
   font-family: inherit;
-  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  /*padding-top: 27px;*/
-  padding-bottom: 27px;
+  font-weight: 400;   /* Roboto Regular */
+
   text-align: left;
 }
 
 .about-table td {
-  display: table-cell;
+  margin-right: 25px;
+  padding-bottom: 26px;
+
   font-family: inherit;
-  font-weight: 700;
   font-size: 45px;
   line-height: 54px;
+  font-weight: 700;   /* Roboto Bold */
+
   text-align: left;
 }
 
 .about-table .percent {
-  font-weight: 700;
+  font-weight: 700;   /* Roboto Bold */
   font-size: 22px;
   vertical-align: super;
 }
 
 /* ---------- Наши партнёры ---------- */
 .partners {
-  margin-bottom: 80px;
+  padding: 0;
+  padding-top: 46px;
+  padding-bottom: 44px;
   background-color: #ffffff;
+
+  border-bottom: 2px solid #eeeeee;
 }
 
 .partners-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  position: relative;
 }
+
 .partners-list li {
-  display: inline-block;
   width: 260px;
 }
+
+.partner-item::after {
+  content: "";
+
+  position: absolute;
+
+  height: 52px;
+  left: 280px;
+
+  background-color: inherit;
+  border-right: 2px solid #eeeeee;
+}
+
 
 .partner-item .partner-logo {
   opacity: 0.2;
@@ -340,6 +756,12 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Подвал сайта ---------- */
 .footer {
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #ffffff;
 }
 
@@ -351,94 +773,115 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts-detail {
   display: block;
+  box-sizing: border-box;
+
+  padding-top: 49px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 48px;
+
   position: absolute;
-  width: 219px;
-  height: 208px;
   top: 54px;
   left: 140px;
-  padding: 50px;
-  background-color: #ffffff;
   z-index: 2;
+
+  width: 319px;
+  height: 308px;
+
+  background-color: #ffffff;
 }
 
 .footer-contacts-detail b {
-  font-weight: 700;
+  padding: 0;
+  margin: 0;
+
   font-size: 18px;
   line-height: 30px;
+  font-weight: 700;   /* Roboto Bold */
+
   text-align: left;
   color: #000000;
 }
 
 .footer-contacts-detail p {
-  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  margin-top: 23px;
+
   font-size: 16px;
   line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
   text-align: left;
   color: #666666;
 }
 
-.btn-write {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 16px;
+.button-write {
+  margin-top: 32px;
+  padding: 17px 0;
+
   width: 219px;
   height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #fb565a;
-  border-radius: 3px;
-}
-
-.btn-write:hover,
-.btn-write:focus {
-  background-color: #e74246;
-}
-
-.btn-write:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #d7373b;
 }
 
 /* ---------- Карта ---------- */
 .footer-contacts-map {
   display: block;
   position: relative;
+
   width: 1440px;
   height: 416px;
 }
 
 .footer-contacts-map::after {
   content: "";
+
   position: absolute;
-  width: 231px;
-  height: 190px;
   top: 89px;
   left: 820px;
-  background-image: url("../img/map-marker.png");
   z-index: 1;
+
+  width: 231px;
+  height: 190px;
+
+  background-image: url("../img/map-marker.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* ---------- социальные сети ---------- */
 .footer-social {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  padding: 69px 0;
+}
+
+.social-icons {
   width: 260px;
-  min-height: 80px;
 }
 
 .social-list {
+  margin: 0;
+  padding: 0;
+
   display: block;
   position: relative;
+
   list-style: none;
 }
 
 .btn-soc::before {
   content: "";
+
   position: absolute;
   width: 79px;
   height: 79px;
+
   color: #ffffff;
+
   background-color: #e1e1e1;
   border-radius: 50%;
 }
@@ -455,24 +898,26 @@ input[type="radio"].visually-hidden {
 
 .btn-soc-vk::before {
   top: 0px;
-  left: 140px;
+  left: 0px;
 }
 
 .btn-soc-fb::before {
   top: 0px;
-  left: 231px;
+  left: 91px;
 }
 
 .btn-soc-ig::before {
   top: 0px;
-  left: 321px;
+  left: 181px;
 }
 
 .btn-soc::after {
   content: "";
+
   position: absolute;
   width: 26px;
   height: 22px;
+
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 1;
@@ -481,19 +926,19 @@ input[type="radio"].visually-hidden {
 .btn-soc-vk::after {
   background-image: url("../img/icon-vk.svg");
   top: 29px;
-  left: 167px;
+  left: 27px;
 }
 
 .btn-soc-fb::after {
   background-image: url("../img/icon-fb.svg");
   top: 29px;
-  left: 258px;
+  left: 118px;
 }
 
 .btn-soc-ig::after {
   background-image: url("../img/icon-insta.svg");
   top: 29px;
-  left: 348px;
+  left: 208px;
 }
 
 .btn-soc-vk:hover::after,
@@ -512,220 +957,305 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.footer-slogan {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 545px;
+
+  margin-left: 139px;
+}
+
 .footer-slogan b {
-  font-weight: 700;
+  padding: 0;
+  padding-top: 6px;
+
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;   /* Roboto Bold */
+
   color: #000000;
 }
 
 .footer-slogan p {
-  font-weight: 400;
+  padding: 0;
+
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 22px;
+  font-weight: 400;   /* Roboto Regular */
+
   color: #444444;
 }
 
 /* ---------- Каталог ---------- */
-.page-title {
-  font-weight: 500;
-  font-size: 55px;
-  line-height: 55px;
-  color: #000000;
+.main-catalog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 20px auto;
 }
 
-/* ---------- Форма фильтра ---------- */
-.filters fieldset {
+.filters {
+  margin: 0;
+  margin-right: 140px;
+  width: 260px;
+}
+
+/* ++++++++++ Сложный фильтр +++++++++++ */
+/* |                                   | */
+/* ------------ фильтр цены ------------ */
+.filter-price {
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+
   border: none;
 }
 
-.filters legend {
-  font-weight: 700;
+.range-filter {
+  width: 260px;
+  margin-top: 48px;
+}
+
+.filter-price legend {
   font-size: 18px;
   line-height: 30px;
+  font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
 }
 
-/* ---------- Элемент управления RANGE с двумя ползунками ---------- */
-/* ----- и полями ввода минимального и максимального значения ------ */
-.slider-range {
-  width: 261px;
-  margin-bottom: 60px;
-}
-
-.controls-range {
+.range-controls {
   position: relative;
-  height: 41px;  /* padding-top + толщина шкалы */
 
-  padding-top: 39px;
+  height: 42px;
+  margin-bottom: 13px;
+  padding-top: 38px;
   padding-right: 21px;
   padding-left: 21px;
-  margin-bottom: 13px;
 
   background-color: #eeeeee;
   border-radius: 3px;
 }
 
-.controls-range .scale {
-  width: 219px;
+.range-controls .scale {
   height: 2px;
-  background-color: #d7dcde;
+
+  background: #d7dcde;
 }
 
-.controls-range .bar {
-  width: 152px;
+.range-controls .bar {
+  width: 70%;
   height: 2px;
+
   background: #00ca74;
 }
 
-.controls-range .toggle {
+.range-controls .toggle {
   position: absolute;
+  top: 29px;
+  left: 0;
+
   width: 4px;
   height: 4px;
-  top: 30px;
-  left: 0;
   padding: 0;
-  background-color: #ababab;
+
   border: 8px solid #ffffff;
-  border-radius: 50%;
+  background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+
   cursor: pointer;
 }
 
-.controls-range .toggle-min {
-  left: 20px;
+.range-controls .toggle-min {
+  left: 18px;
 }
 
-.controls-range .toggle-max {
+.range-controls .toggle-max {
   left: 160px;
 }
 
-.controls-price {
-  width: 290px;
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;   /* Roboto Regular */
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.price-controls {
   font-size: 0;
 }
 
-.controls-price label {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 16px;
-  width: 50%;
-  text-transform: uppercase;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.controls-price input {
-  font: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+.price-controls input {
   width: 60px;
   padding: 8px 10px;
-  margin-left: 10px;
+  margin-left: 12px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;   /* Roboto Regular */
+
   text-align: center;
   color: #283136;
-  background: #eeeeee;
+
   border: none;
-  /*border: 2px solid #d7dcde;*/
+  outline: none;
   border-radius: 3px;
+  background: #eeeeee;
 }
 
-/*.controls-price input:hover {
-  outline: 2px solid #b4b9bb;
+.max-price {
+  text-align: right;
 }
-*/
 
-/*.controls-price input:focus {
-  outline: 2px solid #000000;
+/* --- сетка (radio-buttons) и  ---
+   --- особенности (checkboxes) --- */
+.filter-grid,
+.filter-features {
+  margin: 0;
+  padding: 0;
+
+  width: 260px;
+  border: none;
 }
-*/
-/*-------------------------------------------------------------*/
 
-.filter-options {
+.filter-grid{
+  margin-top: 55px;
+}
+
+.filter-features {
+  margin-top: 29px;
+}
+
+.filter-grid legend,
+.filter-features legend {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  padding-bottom: 2px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;   /* Roboto Bold */
+  text-transform: uppercase;
+}
+
+.filter-grid ul,
+.filter-features ul {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
-.filter-options li {
-  display: block;
-  position: relative;
+.filter-option {
   margin-bottom: 16px;
+  padding-left: 36px;
 }
 
-.filter-input + label {
-  line-height: 20px;
-  color: #283136;
+.filter-option label {
+  position: relative;
+
+  display: block;
+
   cursor: pointer;
+  user-select: none;
 }
 
-.filter-input + label:hover,
-.filter-input + label:focus {
+/* состояния меток (label) радиокнопок и чекбоксов:   */
+.filter-input + label,                /* покой        */
+.filter-input:hover + label,          /* наведение    */
+.filter-input:focus + label {         /* фокус        */
   color: #283136;
 }
 
-.filter-input[disabled] + label {
+.filter-input[disabled] + label {     /* заблокирован */
   color: rgba(40, 49, 54, 0.3);
   cursor: default;
 }
 
-.type-radio + label::before {
+/* состояние покоя псевдоэлемента ::before радиокнопок */
+.filter-input-radio + label::before,
+.filter-input-radio:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
+  left: -35px;
+
   width: 25px;
   height: 25px;
+
+  color: #4d4d4d;
   opacity: 0.4;
-  background-color: #4d4d4d;
-  background: url("../img/radio-off.svg") no-repeat 0 0;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.type-radio + label:hover::before,
-.type-radio + label:focus::before {
-  opacity: 1;
+.filter-input-radio + label::before{                /* ВЫКЛ */
+  background-image: url("../img/radio-off.svg");
 }
 
-.type-radio:checked + label::before {
-  opacity: 1;
-  background-image: url("../img/radio-on.svg");
+.filter-input-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");     /* ВКЛ  */
 }
 
-.type-checkbox + label::before {
+/* состояние покоя псевдоэлемента ::before чекбоксов */
+.filter-input-checkbox + label::before,
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -38px;
-  width: 27px;
+  left: -35px;
+
+  width: 23px;
   height: 23px;
+
+  color: #4d4d4d;
   opacity: 0.4;
-  background-color: #4d4d4d;
-  background: url("../img/checkbox-off.svg") no-repeat 0 0;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.type-checkbox + label:hover::before,
-.type-checkbox + label:focus::before {
+.filter-input-checkbox + label::before {
+  background-image: url("../img/checkbox-off.svg"); /* ВЫКЛ */
+}
+
+.filter-input-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");  /* ВКЛ  */
+}
+
+
+/* состояния псевдоэлемента ::before радиокнопок и чекбоксов    */
+.filter-input-radio + label:hover::before,      /* наведение    */
+.filter-input-radio + label:focus::before,      /* фокус        */
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before {
   opacity: 1;
 }
 
-.type-checkbox:checked + label::before {
-  width: 25px;
-  height: 25px;
-  opacity: 1;
-  background-image: url("../img/checkbox-on.svg");
-}
-
-.type-radio[disabled] + label::before,
-.type-checkbox[disabled] + label::before {
+.filter-input-radio[disabled] + label::before,  /* заблокирован */
+.filter-input-checkbox[disabled] + label::before {
   opacity: 0.1;
   cursor: default;
 }
 
+/* --- кнопка "Показать" (submit) --- */
 .filter-submit {
+  margin-top: 34px;
+  padding: 17px 0;
+
   width: 260px;
   height: 50px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+
   color: #000000;
   background-color: #eeeeee;
 }
@@ -735,28 +1265,62 @@ input[type="radio"].visually-hidden {
   background-color: #dfdfdf;
 }
 
+.filter-submit:focus {
+  outline: none;
+}
+
 .filter-submit:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
+/* ++++++++++++++++++++++++++++++++++++ */
 
+ /* ---------- Сортировка ---------- */
  .sort-title {
-  font-weight: 700;
+  margin: 35px 0;
+  padding: 0;
+
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;   /* Roboto Bold */
   text-transform: uppercase;
   text-align: left;
   color: #000000;
-
 }
 
-.sort-fields {
+.catalog-sort {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgba(255, 128, 255, 0.3); /* временно */
+}
+
+.catalog-sort h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.sort-fields,
+.sort-direction {
+  display: flex;
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
+.sort-fields li {
+  padding-right: 26px;
+}
+
+.sort-fields li:last-child {
+  padding-right: 0;
+}
+
 .sort-fields a {
-  font-weight: 400;
+  font-weight: 400;   /* Roboto Regular */
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -765,7 +1329,14 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.sort-fields .sort-fields-selected {
+.sort-fields a:hover,
+.sort-fields a:focus {
+  opacity: 0.6;
+}
+
+
+.sort-fields .sort-fields-selected,
+.sort-fields a:active {
   opacity: 1;
 }
 
@@ -773,7 +1344,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 40px;
   height: 10px;
-  margin-bottom: 30px; /* временно */
+  /*margin-bottom: 30px; /* временно */*/
   list-style: none;
 }
 
@@ -828,22 +1399,32 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Карточки товаров ---------- */
 .catalog-list {
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
   list-style: none;
 }
 
 .catalog-item {
-  display: inline-block;  /* временно */
+  display: block;
   position: relative;
-  margin-right: 40px;
-  margin-bottom: 33px;
+
+  margin-top: 33px;
+  width: 360px;
+
+  border-radius: 5px;
   outline: none;
 }
 
 .catalog-item:hover,
 .catalog-item:focus {
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .catalog-item::before {
@@ -891,7 +1472,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-title {
-  font-weight: 700;
+  font-weight: 700;   /* Roboto Bold */
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
@@ -911,7 +1492,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-description {
-  font-weight: 400;
+  font-weight: 400;   /* Roboto Regular */
   font-size: 16px;
   line-height: 18px;
   color: #666666;
@@ -940,18 +1521,28 @@ input[type="radio"].visually-hidden {
 
 /* ---------- Пагинация ---------- */
 .pagination-list {
-  /*padding: 0;*/
-  /*margin: 0;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .pagination-list li {
-  display: inline-block;   /* временно */
+  margin-right: 11px;
+}
+
+.pagination-list li:last-child {
+  margin-right: 0;
 }
 
 .pagination-item a {
   display: block;   /* временно */
-  font-weight: 500;
+  font-weight: 500;   /* Roboto Medium */
   font-size: 16px;
   /*line-height: 18px;*/
   text-transform: uppercase;
@@ -991,7 +1582,171 @@ input[type="radio"].visually-hidden {
 }
 
 
-/* всплывающие элементы (pop-up) сейчас временно скрыты (до раздела 7) */
+/* --- модальное окно (pop-up) формы обраной связи --- */
 .modal {
-  display: none;
+  display: block;
+  position: relative;
+}
+
+.modal-feedback {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 84px;
+
+  width: 760px;
+  height: 436px;
+
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-feedback h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 42px;
+
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;   /* Roboto Medium */
+
+  text-align: left;
+  color: #000000;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.feedback-form label {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;   /* Roboto Bold */
+
+  text-align: left;
+  color: #000000;
+}
+
+.feedback-form p {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input {
+  padding: 18px 15px;
+  margin-bottom: 36px;
+  box-sizing: border-box;
+
+  width: 360px;
+  height: 50px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
+  color: rgba(68, 68, 68, 0.5);
+  background-color: #ffffff;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.feedback-form input:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-form input:focus {
+  outline: none;
+
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.feedback-form input:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
+}
+
+.feedback-form textarea {
+  padding: 14px 15px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+
+  width: 760px;
+  height: 118px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;   /* Roboto Regular */
+
+  color: rgba(68, 68, 68, 0.5);
+  background-color: #ffffff;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  resize: none;
+  cursor: pointer;
+}
+
+.feedback-form textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.feedback-form textarea:focus {
+  outline: none;
+
+  color: #444444;
+  border: 2px solid #000000;
+}
+
+.feedback-form textarea:invalid {
+  color: #e74246;
+  border: 2px solid #e74246;
+}
+
+.feedback-submit {
+  padding: 17px 0;
+
+  width: 260px;
+  height: 50px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: #ffffff;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.1;
 }
