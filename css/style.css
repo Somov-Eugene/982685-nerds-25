@@ -1589,16 +1589,23 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback {
-  margin: 0 auto;
-  padding-top: 70px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 84px;
+  margin: 50px auto;
+  padding: 67px 100px;
+
+  width: 960px;
+  height: 590px;
+
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   width: 760px;
-  height: 436px;
-
-  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .modal-feedback h2 {
@@ -1614,16 +1621,16 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.feedback-form {
+.modal-feedback p {
+  margin: 0;
+  margin-bottom: 37px;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 760px;
+  flex-direction: column;
 }
 
 .feedback-form label {
   margin: 0;
-  margin-bottom: 12px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1633,77 +1640,42 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.feedback-form p {
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.feedback-form input {
-  padding: 18px 15px;
-  margin-bottom: 36px;
+.feedback-form input,
+.feedback-form textarea {
   box-sizing: border-box;
+  margin-top: 8px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
 
   width: 360px;
-  height: 50px;
+  /*height: 50px;*/
 
   font: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;   /* Roboto Regular */
-
   color: rgba(68, 68, 68, 0.5);
-  background-color: #ffffff;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
   cursor: pointer;
-}
-
-.feedback-form input:hover {
-  border: 2px solid #b4b9bb;
-}
-
-.feedback-form input:focus {
-  outline: none;
-
-  color: #444444;
-  border: 2px solid #000000;
-}
-
-.feedback-form input:invalid {
-  color: #e74246;
-  border: 2px solid #e74246;
 }
 
 .feedback-form textarea {
-  padding: 14px 15px;
-  margin-bottom: 60px;
-  box-sizing: border-box;
-
   width: 760px;
   height: 118px;
 
-  font: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;   /* Roboto Regular */
-
-  color: rgba(68, 68, 68, 0.5);
-  background-color: #ffffff;
-
-  border: 2px solid #d7dcde;
-  border-radius: 3px;
   resize: none;
-  cursor: pointer;
 }
 
+.feedback-form input:hover,
 .feedback-form textarea:hover {
   border: 2px solid #b4b9bb;
 }
 
+.feedback-form input:focus,
 .feedback-form textarea:focus {
   outline: none;
 
@@ -1711,12 +1683,14 @@ input[type="radio"].visually-hidden {
   border: 2px solid #000000;
 }
 
+.feedback-form input:invalid,
 .feedback-form textarea:invalid {
   color: #e74246;
   border: 2px solid #e74246;
 }
 
 .feedback-submit {
+  margin-top: 9px;
   padding: 17px 0;
 
   width: 260px;
