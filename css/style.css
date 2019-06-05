@@ -1658,7 +1658,10 @@ input[type="radio"].visually-hidden {
 .modal-feedback {
   box-sizing: border-box;
   margin: 50px auto;
-  padding: 67px 100px;
+
+  padding-top: 67px;
+  padding-left: 100px;
+  padding-right: 100px;
 
   width: 960px;
   height: 590px;
@@ -1690,7 +1693,7 @@ input[type="radio"].visually-hidden {
 
 .modal-feedback p {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 
   display: flex;
   flex-direction: column;
@@ -1709,17 +1712,17 @@ input[type="radio"].visually-hidden {
 
 .feedback-form input,
 .feedback-form textarea {
-  box-sizing: border-box;
   margin-top: 8px;
-  padding-top: 16px;
-  padding-bottom: 13px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   padding-left: 13px;
   padding-right: 13px;
+  box-sizing: border-box;
 
   width: 360px;
-  /*height: 50px;*/
+  height: 50px;
 
-  font: inherit;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;   /* Roboto Regular */
@@ -1731,6 +1734,8 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form textarea {
+  padding-top: 13px;
+
   width: 760px;
   height: 118px;
 
@@ -1757,7 +1762,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-submit {
-  margin-top: 9px;
+  margin-top: 13px;
   padding: 17px 0;
 
   width: 260px;
@@ -1784,8 +1789,11 @@ input[type="radio"].visually-hidden {
 
 .modal-close:hover,
 .modal-close:focus {
-  outline: none;
   opacity: 1;
+}
+
+.modal-close:focus {
+  outline: none;
 }
 
 .modal-close:active {
