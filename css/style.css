@@ -160,7 +160,6 @@ input[type="radio"].visually-hidden {
 .header-logo {              /*   покой   */
   width: 160px;
   height: 65px;
-  margin-right: 202px;
 }
 
 .header-logo[href]:hover,   /* наведение */
@@ -197,9 +196,10 @@ input[type="radio"].visually-hidden {
 .site-navigation {
   justify-content: flex-start;
   width: 630px;
+  margin-left: 202px;
 }
 
-.site-navigation li {
+.site-navigation li{
   margin-right: 45px;
 }
 
@@ -648,7 +648,7 @@ input[type="radio"].visually-hidden {
 .about-logo {
   display: block;
   position: relative;
-  font-style: 0;
+  font-size: 0;
 
   width: 360px;
   height: 280px;
@@ -1153,34 +1153,10 @@ input[type="radio"].visually-hidden {
 }
 
 
-------------------------------------------
-
-/*.filter-price {
-  padding: 0;
-  margin: 0;
-  margin-top: 35px;
-
-  border: none;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-.max-price {
-  text-align: right;
-}
-
-/* --- сетка (radio-buttons) и  ---
-   --- особенности (checkboxes) --- */
+/*
+--- сетка (radio-buttons) и  ---
+--- особенности (checkboxes) ---
+*/
 
 .filter-grid{
   margin-top: 55px;
@@ -1277,7 +1253,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/checkbox-on.svg");  /* ВКЛ  */
 }
 
-
 /* состояния псевдоэлемента ::before радиокнопок и чекбоксов    */
 .filter-input-radio + label:hover::before,      /* наведение    */
 .filter-input-radio + label:focus::before,      /* фокус        */
@@ -1322,6 +1297,19 @@ input[type="radio"].visually-hidden {
 /* ++++++++++++++++++++++++++++++++++++ */
 
  /* ---------- Сортировка ---------- */
+.catalog-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 760px;
+
+  margin-right: 0px;
+  margin-bottom: 21px;
+
+  background-color: rgba(255, 0, 0, 0.3); /* временно */
+}
+
  .sort-title {
   margin: 0;
   padding: 0;
@@ -1334,32 +1322,14 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.catalog-sort {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 760px;
-
-  margin-right: 0px;
-  margin-bottom: 21px;
-
-  background-color: rgba(255, 128, 255, 0.3); /* временно */
-}
-
-.sort-title {
-  margin: 0;
-  padding: 0;
-}
-
 .sort-fields,
 .sort-direction {
   padding: 0;
   margin: 0;
+  list-style: none;
 
   display: flex;
   align-self: flex-start;
-  list-style: none;
 }
 
 .sort-fields li {
@@ -1392,10 +1362,12 @@ input[type="radio"].visually-hidden {
 
 .sort-direction {
   display: block;
+  list-style: none;
+
   width: 40px;
   height: 10px;
-  /*margin-bottom: 30px; /* временно */*/
-  list-style: none;
+
+  /*margin-bottom: 30px;*/
 }
 
 .sort-direction-down,
@@ -1506,15 +1478,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-info {
   display: none;
-  position: absolute;
-  width: 230px;
-  min-height: 160px;
-  bottom: 0;
 
-  padding-top: 30px;
-  padding-left: 65px;
-  padding-right: 65px;
-  padding-bottom: 43px;
+  position: absolute;
+  width: 360px;
+  height: 231px;
+  bottom: 0;
 
   background-color: #eeeeee;
   text-align: center;
@@ -1523,10 +1491,10 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-title {
-  margin: 0;
-  margin-bottom: 25px;
-
-  flex-shrink: 0;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 27px;
+  margin-bottom: 15px;
 
   font-weight: 700;   /* Roboto Bold */
   font-size: 18px;
@@ -1548,8 +1516,10 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-description {
+  padding: 0;
   margin: 0;
   margin-bottom: 30px;
+
   font-weight: 400;   /* Roboto Regular */
   font-size: 16px;
   line-height: 18px;
@@ -1557,25 +1527,12 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-price {
-  display: inline-block;
+  margin: 0 auto;
+  padding: 17px 0;
+
   width: 200px;
   height: 50px;
-  line-height: 50px;
-  color: #ffffff;
-  background-color: #fb565a;
-  border-radius: 3px;
 }
-
-.catalog-item-price:hover,
-.catalog-item-price:focus {
-  background-color: #e74246;
-}
-
-.catalog-item-price:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
-  background-color: #d7373b;
-}
-
 
 /* ---------- Пагинация ---------- */
 .pagination-list {
@@ -1599,16 +1556,20 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item a {
-  display: block;   /* временно */
-  font-weight: 500;   /* Roboto Medium */
+  display: block;
+
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 16px;
+
   font-size: 16px;
-  /*line-height: 18px;*/
+  line-height: 18px;
+  font-weight: 500;   /* Roboto Medium */
   text-transform: uppercase;
   text-align: center;
 
   width: 50px;
   height: 50px;
-  line-height: 50px;  /* временно */
 
   color: #000000;
   background-color: #eeeeee;
@@ -1629,6 +1590,7 @@ input[type="radio"].visually-hidden {
 .pagination-item-active a:hover,
 .pagination-item-active a:focus,
 .pagination-item-active a:active {
+  padding-top: 14px;
   box-shadow: none;
   color: #000000;
   background-color: #ffffff;
