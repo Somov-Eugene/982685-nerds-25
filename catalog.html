@@ -2,37 +2,37 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Нёрдс</title>
     <!-- Критерий Д5. Использован normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header-navigation">
+        <nav class="main-navigation">
           <a class="header-logo" href="index.html">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
           </a>
-
           <ul class="site-navigation">
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
             <li class="site-navigation-active"><a>Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-
           <ul class="basket">
             <li><a class="basket-link" href="#">Корзина</a></li>
           </ul>
         </nav>
 
         <h1>Магазин готовых шаблонов</h1>
-    </div>
+      </div>
     </header>
 
-    <main class="container">
-      <div class="main-catalog">
+    <main class="main-catalog container">
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
 
@@ -210,7 +210,6 @@
           <li class="pagination-item pagination-next"><a href="#" aria-label="Перейти на следующую страницу">следующая</a></li>
         </ul>
       </section>
-      </div>
     </main>
 
     <footer class="footer">
@@ -219,13 +218,13 @@
 
         <div class="footer-contacts-detail">
           <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
-          <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+          <address aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
           <p aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</p>
-          <p><a class="button button-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
+          <p><a class="button button-write"  href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
         </div>
 
         <div class="footer-contacts-map">
-          <img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города">
+          <p><img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города"></p>
         </div>
       </section>
 
@@ -250,7 +249,6 @@
 
     <section class="modal modal-feedback">
       <h2>Напишите нам</h2>
-
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-name-id">Ваше имя:</label>
@@ -266,7 +264,6 @@
         </p>
         <button class="button feedback-submit" type="submit">Отправить</button>
       </form>
-
       <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи"><span class="visually-hidden">Закрыть</span></button>
     </section>
 

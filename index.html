@@ -2,37 +2,36 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Нёрдс</title>
     <!-- Критерий Д5. Использован normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header-navigation">
+        <nav class="main-navigation">
           <a class="header-logo">
             <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
           </a>
-
           <ul class="site-navigation">
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
             <li><a href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-
           <ul class="basket">
             <li><a class="basket-link" href="#">Корзина</a></li>
           </ul>
         </nav>
 
         <h1 class="visually-hidden">Нёрдс&nbsp;&ndash; дизайн-студия из Краснодара</h1>
-    </div>
+      </div>
     </header>
 
     <main class="main-index">
-
       <section class="slider">
         <!--
             Слайдер из демонстрации
@@ -99,7 +98,7 @@
             <b class="about-studio">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
             <p class="about-principles">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
 
-            <h3 class="about-subtitle">Выполняем заказы на разработку:</h3>
+            <h3 class="about-orders-subtitle">Выполняем заказы на разработку:</h3>
             <ul class="about-orders-list">
               <li>Веб-сайтов любой сложности</li>
               <li>Мобильных приложений для iOS и Android</li>
@@ -108,27 +107,23 @@
           </div>
 
           <div class="about-column-right">
-            <div class="about-logo">
-              <!-- цветной логотип -->
-            </div>
-
-            <h3 class="about-subtitle">С 2004 года любим точность во всем:</h3>
+            <!-- здесь фон: цветной логотип студии «Нёрдс» -->
+            <h3 class="about-table-subtitle">С 2004 года любим точность во всем:</h3>
             <table class="about-table">
-              <thead>
+              <tbody>
                 <tr>
                   <th>Уровень самоотдачи</th>
                   <th>Соблюдение сроков</th>
                   <th>Минимальная предоплата</th>
                 </tr>
-              </thead>
-              <tbody>
+
                 <tr>
                   <td>146<span class="percent">%</span></td>
                   <td>100<span class="percent">%</span></td>
                   <td>50<span class="percent">%</span></td>
                 </tr>
               </tbody>
-              </table>
+            </table>
           </div>
         </section>
 
@@ -151,8 +146,8 @@
             </li>
           </ul>
         </section>
-      </div>
 
+      </div>
     </main>
 
     <footer class="footer">
@@ -161,13 +156,13 @@
 
         <div class="footer-contacts-detail">
           <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
-          <p aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+          <address aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
           <p aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</p>
-          <p><a class="button button-write" href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
+          <p><a class="button button-write"  href="#" aria-label="Открыть форму обратной связи">Напишите нам</a></p>
         </div>
 
         <div class="footer-contacts-map">
-          <img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города">
+          <p><img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города"></p>
         </div>
       </section>
 
@@ -192,7 +187,6 @@
 
     <section class="modal modal-feedback">
       <h2>Напишите нам</h2>
-
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="user-name-id">Ваше имя:</label>
@@ -208,7 +202,6 @@
         </p>
         <button class="button feedback-submit" type="submit">Отправить</button>
       </form>
-
       <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
