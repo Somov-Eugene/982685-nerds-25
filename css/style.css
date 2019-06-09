@@ -258,10 +258,9 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  right: 0px;
+  right: 0;
+  left: 0;
   bottom: -5px;
-  left: 0px;
-
   height: 2px;
 
   background-color: #fb565a;
@@ -337,7 +336,7 @@ input[type="radio"].visually-hidden {
 .slider-item:nth-child(1) {
   background-image: url("../img/slide-picture-1.png");
   background-repeat: no-repeat;
-  background-position: 93% 0px;
+  background-position: 93% 0;
 }
 
 .slider-item:nth-child(2) {
@@ -736,7 +735,7 @@ input[type="radio"].visually-hidden {
 }
 
 .partner-item:nth-child(2) {
-  padding-top: 46px;;
+  padding-top: 46px;
 }
 
 .partner-item:nth-child(3) {
@@ -804,7 +803,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 54px;
   left: 140px;
-  z-index: 10;
+  z-index: 5;
 
   width: 319px;
   height: 308px;
@@ -863,13 +862,6 @@ input[type="radio"].visually-hidden {
   height: 416px;
 }
 
-.footer-contacts-map iframe {
-  position: relative;
-  border: none;
-
-  z-index: 3;
-}
-
 .footer-contacts-map p {
   margin: 0;
   position: absolute;
@@ -896,14 +888,22 @@ input[type="radio"].visually-hidden {
   z-index: 2;
 }
 
+/*.footer-contacts-map iframe {
+  position: relative;
+  border: none;
+
+  z-index: 3;
+}
+*/
+
 /* ---------- социальные сети ---------- */
 .footer-social {
+  padding: 69px 0;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-
-  padding: 69px 0;
 }
 
 .social-icons {
@@ -913,93 +913,106 @@ input[type="radio"].visually-hidden {
 .social-list {
   margin: 0;
   padding: 0;
+  list-style: none;
 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 260px;
+}
+
+.social-item {
   display: block;
   position: relative;
 
-  list-style: none;
-}
-
-.btn-soc::before {
-  content: "";
-
-  position: absolute;
   width: 79px;
   height: 79px;
 
-  color: #ffffff;
-
-  background-color: #e1e1e1;
   border-radius: 50%;
+  background-color: #e1e1e1;
 }
 
-.btn-soc:hover::before,
-.btn-soc:focus::before {
+.social-item:hover,
+.social-item:focus {
   background-color: #e74246;
 }
 
-.btn-soc:active::before {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+.social-item:focus {
+  outline: none;
+}
+
+.social-item:active {
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
-.btn-soc-vk::before {
-  top: 0px;
-  left: 0px;
-}
-
-.btn-soc-fb::before {
-  top: 0px;
-  left: 91px;
-}
-
-.btn-soc-ig::before {
-  top: 0px;
-  left: 181px;
-}
-
-.btn-soc::after {
+.social-vk::after {
   content: "";
 
   position: absolute;
+  top: 28px;
+  left: 27px;
+
   width: 26px;
   height: 22px;
 
+  background-image: url("../img/icon-vk.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   z-index: 1;
 }
 
-.btn-soc-vk::after {
-  background-image: url("../img/icon-vk.svg");
+.social-fb::after {
+  content: "";
+
+  position: absolute;
   top: 28px;
   left: 27px;
-}
 
-.btn-soc-fb::after {
+  width: 26px;
+  height: 22px;
+
   background-image: url("../img/icon-fb.svg");
-  top: 28px;
-  left: 118px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 1;
 }
 
-.btn-soc-ig::after {
+.social-ig::after {
+  content: "";
+
+  position: absolute;
+  top: 28px;
+  left: 27px;
+
+  width: 26px;
+  height: 22px;
+
   background-image: url("../img/icon-insta.svg");
-  top: 28px;
-  left: 207px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  z-index: 1;
 }
 
-.btn-soc-vk:hover::after,
-.btn-soc-vk:focus::after,
-.btn-soc-fb:hover::after,
-.btn-soc-fb:focus::after,
-.btn-soc-ig:hover::after,
-.btn-soc-ig:focus::after {
+.social-vk:hover::after,
+.social-fb:hover::after,
+.social-ig:hover::after,
+.social-vk:focus::after,
+.social-fb:focus::after,
+.social-ig:focus::after {
   background-color: #e74246;
 }
 
-.btn-soc-vk:active::after,
-.btn-soc-fb:active::after,
-.btn-soc-ig:active::after {
+.social-vk:focus::after,
+.social-fb:focus::after,
+.social-ig:focus::after {
+  outline: none;
+}
+
+.social-vk:active::after,
+.social-fb:active::after,
+.social-ig:active::after {
   background-color: #d7373b;
   opacity: 0.3;
 }
@@ -1007,7 +1020,7 @@ input[type="radio"].visually-hidden {
 .footer-slogan {
   display: flex;
   flex-direction: column;
-  flex-basis: 545px;
+  width: 760px;
 
   margin-left: 139px;
 }
@@ -1363,7 +1376,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-submit:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
@@ -1659,7 +1672,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item a:active {
-  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
@@ -1685,16 +1698,10 @@ input[type="radio"].visually-hidden {
 /* =================== MODAL ================== */
 /* модальное окно (pop-up) формы обратной связи */
 .modal {
-  display: none;
-  position: fixed;
-
-  top: 55px;
-  left: calc(50% - 480px);
-
-  width: 960px;
   z-index: 10;
+
   background-color: #ffffff;
-  box-shadow: 0 20px 40px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .modal-show {
@@ -1707,17 +1714,19 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback {
-  box-sizing: border-box;
+  display: none;
+  position: fixed;
 
+  top: 60px;
+  left: calc(50% - 480px);
+
+  box-sizing: border-box;
   padding-top: 67px;
   padding-left: 100px;
   padding-right: 100px;
 
   width: 960px;
   height: 590px;
-
-  background-color: #ffffff;
-  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .feedback-form {
