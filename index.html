@@ -164,10 +164,12 @@
         </section>
       </div>
 
-      <section class="footer-map">
+      <div class="footer-map">
+        <!-- Статичная карта -->
         <p><img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города"></p>
-        <div class="yamap" id="map"></div><!-- Интерактивная карта от Яндекса -->
-      </section>
+        <!-- Интерактивная карта от Яндекса -->
+        <div class="yamap" id="map"></div>
+      </div>
 
       <div class="container">
         <section class="footer-social">
@@ -221,6 +223,7 @@
       <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

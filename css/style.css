@@ -28,8 +28,6 @@
        url("../fonts/roboto-bold.woff") format("woff");
 }
 
-
-
 /* --------- Общие элементы -------- */
 /*
 Критерий Д25. Нет глобальных стилей тегов
@@ -53,13 +51,11 @@ body {
 }
 
 a {
-  outline: none;
   text-decoration: none;
 }
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -82,10 +78,10 @@ input[type="radio"].visually-hidden {
 /*         состояния кнопок           */
 .button {           /* покой */
   display: block;
+  box-sizing: border-box;
   padding: 0;
   padding-top: 17px;
   padding-bottom: 17px;
-  box-sizing: border-box;
 
   height: 50px;
 
@@ -99,6 +95,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #fb565a;
   border-radius: 3px;
+
   border: none;
   outline: none;
 }
@@ -145,16 +142,18 @@ input[type="radio"].visually-hidden {
   font-weight: 500;   /* Roboto Medium */
   text-align: center;
   color: #000000;
+
+  min-height: 223px;
 }
 
 .main-navigation {
+  box-sizing: border-box;
+  padding-top: 49px;
+  padding-bottom: 18px;
+
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-
-  padding-top: 49px;
-  padding-bottom: 18px;
-  box-sizing: border-box;
 }
 
 .header-logo {             /*   покой   */
@@ -177,10 +176,10 @@ input[type="radio"].visually-hidden {
 
 .site-navigation,
 .basket {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-top: 26px;
-  box-sizing: border-box;
 
   display: flex;
   flex-wrap: wrap;
@@ -229,7 +228,10 @@ input[type="radio"].visually-hidden {
   top: 7px;
   left: -40px;
 
-  background: url("../img/icon-basket.svg") no-repeat 0 0;
+  background-image: url("../img/icon-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
   opacity: 0.3;
 }
 
@@ -271,6 +273,11 @@ input[type="radio"].visually-hidden {
 
 
 /* ================== MAIN =================== */
+.main-index {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ---------------- Слайдер ------------------ */
 /* https://up.htmlacademy.ru/htmlcss/25/demos/ */
 /*     (переключение слайдов с помощью CSS)    */
@@ -428,8 +435,6 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
-
-  /*min-height: 510px;*/
 }
 
 .services-list {
@@ -701,7 +706,6 @@ input[type="radio"].visually-hidden {
   vertical-align: super;
 }
 
-
 /* ---------- Наши партнёры ---------- */
 .partners {
   padding: 0;
@@ -769,7 +773,7 @@ input[type="radio"].visually-hidden {
 }
 
 .partner-item .partner-logo:active {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 /* ============= End of MAIN =============== */
@@ -859,6 +863,7 @@ input[type="radio"].visually-hidden {
 .footer-map {
   display: block;
   position: relative;
+  max-width: 100%;
 }
 
 .footer-map p {
@@ -867,6 +872,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   top: 0;
   left: 0;
+
+  max-width: 100%;
+  height: auto;
 
   z-index: 1;
 }
@@ -877,6 +885,9 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 416px;
 
   z-index: 3;
 }
@@ -1184,8 +1195,8 @@ input[type="radio"].visually-hidden {
   color: #283136;
 
   background-color: #eeeeee;
-  border: none;
   border-radius: 3px;
+  border: none;
 }
 
 .max-price {
@@ -1194,7 +1205,6 @@ input[type="radio"].visually-hidden {
 
 
 /* --- СЕТКА --- */
-
 .filter-grid legend {
   padding-top: 55px;
   padding-bottom: 14px;
@@ -1421,6 +1431,9 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-fields a {
+  padding: 0;
+  margin: 0;
+
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;   /* Roboto Regular */
@@ -1529,11 +1542,14 @@ input[type="radio"].visually-hidden {
 
 .catalog-item::before {
   content: "";
+
   position: absolute;
-  width: 360px;
-  height: 40px;
   top: 0;
   left: 0;
+
+  width: 360px;
+  height: 40px;
+
   background-image: url("../img/browser.svg");
   opacity: 0.12;
 }
@@ -1548,22 +1564,25 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-picture {
+  padding-top: 40px;
+
   width: 360px;
   height: 576px;
-  padding-top: 40px;
 }
 
 .catalog-item-info {
   display: none;
 
   position: absolute;
+  bottom: 0;
+
   width: 360px;
   height: 231px;
-  bottom: 0;
 
   background-color: #eeeeee;
   text-align: center;
   overflow: auto;
+
   z-index: 1;
 }
 
@@ -1605,7 +1624,6 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-price {
   margin: 0 auto;
-  padding: 17px 0;
 
   width: 200px;
   height: 50px;
@@ -1667,10 +1685,11 @@ input[type="radio"].visually-hidden {
 .pagination-item-active a:focus,
 .pagination-item-active a:active {
   padding-top: 14px;
-  box-shadow: none;
   color: #000000;
+
   background-color: #ffffff;
   border: 3px solid #dbdbdb;
+  box-shadow: none;
 }
 
 .pagination-next a {
@@ -1848,7 +1867,7 @@ input[type="radio"].visually-hidden {
 /* анимация для открытия модального окна */
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(-1000px);
   }
 
   70% {
