@@ -68,7 +68,8 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -78,7 +79,8 @@ input[type="radio"].visually-hidden {
 /*         состояния кнопок           */
 .button {           /* покой */
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -109,7 +111,8 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #d7373b;
-  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /* --------------------------------- */
 
@@ -135,7 +138,8 @@ input[type="radio"].visually-hidden {
   padding: 0;
   padding-top: 60px;
   padding-bottom: 108px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   font-size: 55px;
   line-height: 55px;
@@ -147,13 +151,23 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 49px;
   padding-bottom: 18px;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .header-logo {             /*   покой   */
@@ -176,13 +190,19 @@ input[type="radio"].visually-hidden {
 
 .site-navigation,
 .basket {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-top: 26px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   font-size: 16px;
   line-height: 30px;
@@ -196,7 +216,9 @@ input[type="radio"].visually-hidden {
   margin-left: 202px;
   width: 630px;
 
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .site-navigation li {
@@ -211,7 +233,9 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
   width: 120px;
 
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .basket-link {
@@ -274,8 +298,14 @@ input[type="radio"].visually-hidden {
 
 /* ================== MAIN =================== */
 .main-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /* ---------------- Слайдер ------------------ */
@@ -298,7 +328,10 @@ input[type="radio"].visually-hidden {
 
   text-align: center;
   font-size: 0;
-  transform: translateX(-50%);
+
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slider-controls label {
@@ -431,7 +464,8 @@ input[type="radio"].visually-hidden {
   padding: 0;
   padding-top: 80px;
   padding-bottom: 80px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
@@ -442,8 +476,13 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .service-item {
@@ -551,10 +590,16 @@ input[type="radio"].visually-hidden {
 .about {
   padding: 0;
   padding-bottom: 60px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
@@ -667,13 +712,25 @@ input[type="radio"].visually-hidden {
 }
 
 .about-table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .about-table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .about-table th,
@@ -711,7 +768,8 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   margin-bottom: 80px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
@@ -722,14 +780,23 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
   min-height: 180px;
 }
 
 .partner-item {
   position: relative;
-  align-items: stretch;
+
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 
   width: 260px;
   text-align: center;
@@ -784,9 +851,18 @@ input[type="radio"].visually-hidden {
   padding-bottom: 80px;
   position: relative;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   background-color: #ffffff;
 }
@@ -799,7 +875,8 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts-detail {
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   padding-top: 49px;
   padding-left: 50px;
@@ -809,12 +886,12 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 54px;
   left: 0;
+  z-index: 3;
 
   width: 319px;
   height: 308px;
 
   background-color: #ffffff;
-  z-index: 5;
 }
 
 .footer-contacts-detail b {
@@ -833,6 +910,7 @@ input[type="radio"].visually-hidden {
 .footer-contacts-detail p {
   padding: 0;
   margin: 0;
+  margin-top: 23px;
 
   font-size: 16px;
   line-height: 18px;
@@ -859,14 +937,15 @@ input[type="radio"].visually-hidden {
   height: 50px;
 }
 
+
 /* ---------- Карта ---------- */
 .footer-map {
   display: block;
   position: relative;
-  max-width: 100%;
+  height: 416px;
 }
 
-.footer-map p {
+.footer-map img {
   margin: 0;
 
   position: relative;
@@ -889,17 +968,27 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 416px;
 
-  z-index: 3;
+  z-index: 2;
 }
 
 /* ---------- социальные сети ---------- */
 .footer-social {
-  padding: 69px 0;
+  padding: 0;
+  padding-top: 69px;
+  padding-bottom: 69px;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .social-icons {
@@ -911,9 +1000,16 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   width: 260px;
 }
@@ -939,7 +1035,8 @@ input[type="radio"].visually-hidden {
 }
 
 .social-item:active {
-  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+          box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
@@ -1014,11 +1111,18 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-slogan {
-  display: flex;
-  flex-direction: column;
-  width: 760px;
-
   margin-left: 139px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  width: 760px;
 }
 
 .footer-slogan b {
@@ -1034,7 +1138,6 @@ input[type="radio"].visually-hidden {
 
 .footer-slogan p {
   padding: 0;
-
   margin-top: 10px;
 
   font-size: 16px;
@@ -1049,9 +1152,18 @@ input[type="radio"].visually-hidden {
 
 /* ================== CATALOG ================ */
 .main-catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .filters,
@@ -1148,7 +1260,8 @@ input[type="radio"].visually-hidden {
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+          box-shadow: 0 2px 1px 0 #cfcfcf;
 
   cursor: pointer;
 }
@@ -1184,6 +1297,7 @@ input[type="radio"].visually-hidden {
   padding-left: 8px;
   padding-right: 8px;
   margin-left: 10px;
+
   width: 60px;
   height: 20px;
 
@@ -1227,7 +1341,10 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* состояния меток (label) радиокнопок и чекбоксов:   */
@@ -1371,7 +1488,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-submit:active {
-  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+          box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
@@ -1383,10 +1501,23 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 22px;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
   width: 760px;
 }
 
@@ -1408,9 +1539,18 @@ input[type="radio"].visually-hidden {
   margin: 0;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .sort-fields {
@@ -1491,23 +1631,26 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-direction-up:hover::before,
-.sort-direction-up:focus::before,
 .sort-direction-down:hover::before,
+.sort-direction-up:focus::before,
 .sort-direction-down:focus::before {
-  outline: none;
   opacity: 0.4;
 }
 
-.sort-direction-up:active::before,
-.sort-direction-down:active::before {
-  opacity: 1;
+.sort-direction-up:focus::before,
+.sort-direction-down:focus::before,
+.sort-direction-selected:focus::before {
+  outline: none;
 }
 
+.sort-direction-up:active::before,
+.sort-direction-down:active::before,
 .sort-direction-selected::before,
 .sort-direction-selected:hover::before,
 .sort-direction-selected:focus::before {
   opacity: 1;
 }
+
 
 /* ---------- Карточки товаров ---------- */
 .catalog-list {
@@ -1516,10 +1659,21 @@ input[type="radio"].visually-hidden {
   padding-bottom: 60px;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   width: 760px;
 }
@@ -1537,7 +1691,8 @@ input[type="radio"].visually-hidden {
 
 .catalog-item:hover,
 .catalog-item:focus {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .catalog-item::before {
@@ -1635,10 +1790,21 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .pagination-list li {
@@ -1652,7 +1818,8 @@ input[type="radio"].visually-hidden {
 .pagination-item a {
   display: block;
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 17px;
   padding-bottom: 16px;
 
@@ -1675,7 +1842,8 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item a:active {
-  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+          box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
@@ -1689,7 +1857,8 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
   border: 3px solid #dbdbdb;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .pagination-next a {
@@ -1706,7 +1875,7 @@ input[type="radio"].visually-hidden {
   display: none;
   position: fixed;
 
-  top: 55px;
+  top: 100px;
   left: calc(50% - 480px);
 
   z-index: 10;
@@ -1714,15 +1883,18 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .modal-feedback {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 67px;
   padding-left: 100px;
   padding-right: 100px;
@@ -1731,13 +1903,21 @@ input[type="radio"].visually-hidden {
   height: 590px;
 
   background-color: #ffffff;
-  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+          box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .feedback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   width: 760px;
 }
@@ -1759,8 +1939,14 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 35px;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .feedback-form label {
@@ -1781,7 +1967,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 14px;
   padding-left: 13px;
   padding-right: 13px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   width: 360px;
   height: 50px;
@@ -1865,29 +2052,55 @@ input[type="radio"].visually-hidden {
 }
 
 /* анимация для открытия модального окна */
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-1000px);
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 
   70% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
   }
 
   90% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 /* анимация в случае ошибки - тряска формы */
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -1895,14 +2108,40 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
