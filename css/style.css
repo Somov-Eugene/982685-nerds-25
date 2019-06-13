@@ -130,6 +130,10 @@ input[type="radio"].visually-hidden {
 
 /* =============== HEADER =============== */
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
   background-color: #eeeeee;
 }
 
@@ -165,12 +169,18 @@ input[type="radio"].visually-hidden {
       -ms-flex-direction: row;
           flex-direction: row;
 
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
 .header-logo {             /*   покой   */
+  -ms-flex-negative: 0;
+        flex-shrink: 0;
+
   width: 160px;
   height: 65px;
 }
@@ -197,10 +207,9 @@ input[type="radio"].visually-hidden {
   padding-top: 26px;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
+
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
@@ -244,7 +253,7 @@ input[type="radio"].visually-hidden {
 }
 
 .basket-link::before {
-  content:"";
+  content: "";
   position: absolute;
   width: 15px;
   height: 15px;
@@ -367,7 +376,6 @@ input[type="radio"].visually-hidden {
 .slider-list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -396,8 +404,7 @@ input[type="radio"].visually-hidden {
 
 /*
   Критерий Д7. Нет вложенности селекторов больше двух
-  Важно: допускается использовать селекторы с вложенностью больше двух
-  при оживлении слайдеров на чистом CSS
+  Важно: допускается использовать селекторы с вложенностью больше двух при оживлении слайдеров на чистом CSS
 */
 
 #advantage-1-id:checked ~ .slider-list .slider-item:nth-child(1) {
@@ -420,7 +427,6 @@ input[type="radio"].visually-hidden {
   left: 50%;
   top: 50%;
 
-  z-index: 2;
 
   width: 4px;
   height: 4px;
@@ -429,6 +435,8 @@ input[type="radio"].visually-hidden {
   background-color: inherit;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
+
+  z-index: 2;
 }
 
 .slider-item h3 {
@@ -841,6 +849,10 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
+.partner-item .partner-logo:focus {
+  outline: none;
+}
+
 .partner-item .partner-logo:active {
   opacity: 0.1;
 }
@@ -1022,6 +1034,7 @@ input[type="radio"].visually-hidden {
 .social-item {
   display: block;
   position: relative;
+  margin-bottom: 12px;
 
   width: 79px;
   height: 79px;
