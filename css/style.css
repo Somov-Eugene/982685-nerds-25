@@ -338,6 +338,8 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
+
   width: 18px;
   height: 18px;
   padding: 8px;
@@ -352,14 +354,14 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 8px;
   left: 8px;
-  z-index: 1;
 
   width: 18px;
   height: 18px;
 
   background: #ffffff;
-
   border-radius: 50%;
+
+  z-index: 1;
 }
 
 .slider-list {
@@ -980,12 +982,15 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1279,9 +1284,11 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls label {
+  margin: 0;
+
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
+
   width: 130px;
 
   font-family: inherit;
