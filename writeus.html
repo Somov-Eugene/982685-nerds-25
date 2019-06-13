@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+    <!-- Критерий Д5. Использован normalize.css -->
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="main-navigation">
+          <a class="header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+          </a>
+
+          <ul class="site-navigation">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+
+          <ul class="basket">
+            <li><a class="basket-link" href="#">Корзина</a></li>
+          </ul>
+        </nav>
+
+        <h1 class="visually-hidden">Нёрдс&nbsp;&ndash; дизайн-студия из Краснодара</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="modal-feedback">
+        <h2>Напишите нам</h2>
+
+        <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+          <p>
+            <label for="user-name-id">Ваше имя:</label>
+            <input class="msg-user" id="user-name-id" type="text" name="user-name" placeholder="Имя Фамилия" aria-label="Введите Ваше имя и фамилию" required>
+          </p>
+          <p>
+            <label for="user-mail-id">Ваш e-mail:</label>
+            <input class="msg-mail" id="user-mail-id" type="text" name="user-mail" placeholder="email@example.com" aria-label="Введите Ваш адрес электронной почты" required>
+          </p>
+          <p>
+            <label for="msg-text-id">Текст письма:</label>
+            <textarea class="msg-text" id="msg-text-id" name="user-text" placeholder="В свободной форме" aria-label="Введите Ваше сообщение в свободной форме" required></textarea>
+          </p>
+          <button class="button feedback-submit" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контактная информация</h2>
+
+          <div class="footer-contacts-detail">
+            <b aria-label="Дизайн-студия «Нёрдс»">NЁRDS DESIGN STUDIO</b>
+            <address aria-label="Почтовый индекс 191186, город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+            <p aria-label="Телефон +7 812 275 75 75">тел. +7 (812) 275-75-75</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer-map">
+        <!-- Статичная карта -->
+        <img src="img/map.jpg" width="1440" height="416" alt="Дизайн-студия «Нёрдс» на карте города">
+      </div>
+
+      <div class="container">
+        <section class="footer-social">
+          <div class="social-icons">
+            <h2 class="visually-hidden">Наша студия в социальных сетях</h2>
+
+            <ul class="social-list">
+              <li>
+                <a class="social-item social-vk" href="#" aria-label="Нёрдс ВКонтакте">
+                  <span class="visually-hidden">ВКонтакте</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-item social-fb" href="#" aria-label="Нёрдс в Фейсбуке">
+                  <span class="visually-hidden">Фейсбук</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-item social-ig" href="#" aria-label="Нёрдс в Инстаграме">
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-slogan">
+            <b>Давайте дружить, это выгодно!</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+  </body>
+</html>
