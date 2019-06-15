@@ -96,6 +96,9 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   color: #ffffff;
 
+  white-space: nowrap;
+  overflow: hidden;
+
   background-color: #fb565a;
   border-radius: 3px;
 
@@ -914,6 +917,8 @@ input[type="radio"].visually-hidden {
   width: 319px;
   height: 308px;
 
+  overflow: hidden;
+
   background-color: #ffffff;
   z-index: 3;
 }
@@ -954,8 +959,10 @@ input[type="radio"].visually-hidden {
 }
 
 .button-write {
-  margin-top: 37px;
-  padding: 17px 0;
+  position: absolute;
+
+  left: 50px;
+  bottom: 47px;
 
   width: 219px;
   height: 50px;
@@ -1378,10 +1385,17 @@ input[type="radio"].visually-hidden {
 }
 
 /* состояния меток (label) радиокнопок и чекбоксов:   */
-.filter-input + label,                /* покой        */
+.filter-input + label {               /* покой        */
+  color: #283136;
+}
+
 .filter-input:hover + label,          /* наведение    */
 .filter-input:focus + label {         /* фокус        */
   color: #283136;
+}
+
+.filter-input:focus + label {
+  outline: none;
 }
 
 .filter-input[disabled] + label {     /* заблокирован */
@@ -1482,10 +1496,10 @@ input[type="radio"].visually-hidden {
 }
 
 /* состояния псевдоэлемента ::before радиокнопок и чекбоксов    */
-.filter-input-radio + label:hover::before,      /* наведение    */
-.filter-input-radio + label:focus::before,      /* фокус        */
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before {
+.filter-input-radio:hover + label::before,      /* наведение    */
+.filter-input-radio:focus + label::before,      /* фокус        */
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
   opacity: 1;
 }
 
@@ -1739,7 +1753,8 @@ input[type="radio"].visually-hidden {
   opacity: 0.12;
 }
 
-.catalog-item:hover::before {
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   opacity: 1;
 }
 
@@ -1766,7 +1781,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #eeeeee;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 
   z-index: 1;
 }
@@ -1808,10 +1823,15 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-price {
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+  position: absolute;
+  left: 80px;
+  bottom: 43px;
 
   width: 200px;
   height: 50px;
+
+  z-index: 2;
 }
 
 .catalog-item-price:active {
@@ -1856,12 +1876,17 @@ input[type="radio"].visually-hidden {
           box-sizing: border-box;
   padding-top: 17px;
   padding-bottom: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;   /* Roboto Medium */
   text-transform: uppercase;
   text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
 
   width: 50px;
   height: 50px;
