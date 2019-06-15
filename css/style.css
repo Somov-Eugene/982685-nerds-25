@@ -1522,6 +1522,7 @@ input[type="radio"].visually-hidden {
 
 .filter-submit:hover,
 .filter-submit:focus {
+  color: #000000;
   background-color: #dfdfdf;
 }
 
