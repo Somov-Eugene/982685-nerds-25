@@ -441,7 +441,6 @@ input[type="radio"].visually-hidden {
   left: 50%;
   top: 50%;
 
-
   width: 4px;
   height: 4px;
   margin: -4px;
@@ -454,9 +453,10 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-item h3 {
-  max-width: 600px;
   margin: 0;
   margin-bottom: 27px;
+
+  max-width: 600px;
 
   font-size: 55px;
   line-height: 55px;
@@ -467,17 +467,16 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-item p {
-  max-width: 430px;
   margin: 0;
   margin-bottom: 38px;
+
+  max-width: 430px;
 
   text-align: left;
   color: #283136;
 }
 
 .slider-item-button {
-  padding: 17px 0;
-
   width: 240px;
   height: 50px;
 }
@@ -1509,7 +1508,6 @@ input[type="radio"].visually-hidden {
   cursor: default;
 }
 
-
 /* --- кнопка "Показать" (submit) --- */
 .filter-submit {
   margin-top: 30px;
@@ -1823,7 +1821,6 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-price {
-  /*margin: 0 auto;*/
   position: absolute;
   left: 80px;
   bottom: 43px;
