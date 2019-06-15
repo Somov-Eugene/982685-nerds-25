@@ -863,7 +863,6 @@ input[type="radio"].visually-hidden {
 
 /* =============== FOOTER ================== */
 .footer {
-  padding-bottom: 80px;
   position: relative;
 
   display: -webkit-box;
@@ -901,12 +900,12 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 54px;
   left: 0;
-  z-index: 3;
 
   width: 319px;
   height: 308px;
 
   background-color: #ffffff;
+  z-index: 3;
 }
 
 .footer-contacts-detail b {
@@ -990,7 +989,7 @@ input[type="radio"].visually-hidden {
 .footer-social {
   padding: 0;
   padding-top: 69px;
-  padding-bottom: 69px;
+  padding-bottom: 57px;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1001,8 +1000,8 @@ input[type="radio"].visually-hidden {
       -ms-flex-direction: row;
           flex-direction: row;
 
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   -webkit-box-pack: start;
       -ms-flex-pack: start;
