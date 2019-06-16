@@ -35,7 +35,7 @@
  - Normalize.css, который исправляет браузерные умолчания
  - Уникальные теги документа: html, body
  - Дополнительная нормализация: a и img
- */
+*/
 
 body {
   margin: 0;
@@ -959,12 +959,13 @@ input[type="radio"].visually-hidden {
 
 .button-write {
   position: absolute;
-
   left: 50px;
   bottom: 47px;
 
   width: 219px;
   height: 50px;
+
+  z-index: 4;
 }
 
 
