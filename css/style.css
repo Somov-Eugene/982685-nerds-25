@@ -82,11 +82,13 @@ input[type="radio"].visually-hidden {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding: 16px 20px;
+  /*padding-top: 17px;*/
+  /*padding-bottom: 17px;*/
+  /*padding-left: 28px;*/
+  /*padding-right: 28px;*/
 
-  height: 50px;
+  min-height: 50px;
 
   font-size: 16px;
   line-height: 18px;
@@ -96,7 +98,7 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   color: #ffffff;
 
-  white-space: nowrap;
+  white-space: wrap;
   overflow: hidden;
 
   background-color: #fb565a;
@@ -478,7 +480,6 @@ input[type="radio"].visually-hidden {
 
 .slider-item-button {
   width: 240px;
-  height: 50px;
 }
 
 
@@ -963,7 +964,6 @@ input[type="radio"].visually-hidden {
   bottom: 47px;
 
   width: 219px;
-  height: 50px;
 
   z-index: 4;
 }
@@ -1760,7 +1760,14 @@ input[type="radio"].visually-hidden {
 
 .catalog-item:hover .catalog-item-info,
 .catalog-item:focus .catalog-item-info {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .catalog-picture {
@@ -1772,25 +1779,29 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-info {
   display: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   position: absolute;
   bottom: 0;
 
+  padding: 27px 0 43px;
+
   width: 360px;
-  height: 231px;
+  min-height: 231px;
+  max-height: 400px;
 
   background-color: #eeeeee;
   text-align: center;
-  overflow: hidden;
 
   z-index: 1;
 }
 
 .catalog-item-title {
-  padding: 0;
-  margin: 0 auto;
-  margin-top: 27px;
-  margin-bottom: 15px;
+  -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+  margin: 0 25px 15px;
 
   font-weight: 700;   /* Roboto Bold */
   font-size: 18px;
@@ -1812,25 +1823,24 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-description {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 65px;
 
   font-weight: 400;   /* Roboto Regular */
   font-size: 16px;
   line-height: 18px;
   color: #666666;
+
+  overflow: auto;
 }
 
 .catalog-item-price {
-  position: absolute;
-  left: 80px;
-  bottom: 43px;
+  -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+  margin: 0 auto;
+  margin-top: 30px;
 
   width: 200px;
-  height: 50px;
-
-  z-index: 2;
 }
 
 .catalog-item-price:active {
