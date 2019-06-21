@@ -1885,19 +1885,17 @@ input[type="radio"].visually-hidden {
           box-sizing: border-box;
   padding-top: 17px;
   padding-bottom: 16px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;   /* Roboto Medium */
   text-transform: uppercase;
   text-align: center;
-
   white-space: nowrap;
-  overflow: hidden;
 
-  width: 50px;
+  min-width: 50px;
   height: 50px;
 
   color: #000000;
@@ -1930,7 +1928,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-next a {
-  width: 260px;
+  min-width: 260px;
 }
 
 /* ============== End of CATALOG ============= */
